@@ -24,13 +24,22 @@ const headerStyle = {
     "display": "block",
     "transform": "translate(-50%,-50%)",
     color: "black"
-    
-
 }
+
+async function addUser(event, formData) {
+    event.preventDefault();
+    console.log("api called")
+    // POST request using fetch with async/await
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(formData)
+    };
+    const response =  await fetch('https://zkv7ajqod9.execute-api.us-east-1.amazonaws.com/dev/contact-form', requestOptions);
+    console.log("response: " + response)
+}
+
 export default function Contact() {
-    const [initialized, setInitialized] = useState(false);
-    const [images, setImages] = useState([]);
-    const [layers, setLayers] = useState([]);
+
     let pageHeader = React.createRef();
 
     // form data
@@ -43,6 +52,16 @@ export default function Contact() {
     const [phoneNum, setPhoneNum] = useState("Phone Number");
     const [comments, setComments] = useState("Questions or Comments");
 
+    const formData = {
+        'firstname': firstName,
+        'lastName': lastName,
+        'jobTitle': jobTitle,
+        'organization': organization,
+        'website': website,
+        'email': email,
+        'phoneNum': phoneNum,
+        "comments": comments
+    }
 
     const image1 = require("../../assets/img/ron-otsu-62_2KGyX13E-unsplash.jpg")
     const image2 = require("../../assets/img/1600x900-anti-flash-white-solid-color-background.jpg")
@@ -52,7 +71,7 @@ export default function Contact() {
             <div className="main">
                 <Container fluid={true}>
                     <Row className="justify-content-md-center header">
-                        <Col style={{ "padding-left": 0, "padding-right": 0 }}>
+                        <Col style={{ "paddingLeft": 0, "paddingRight": 0 }}>
                         <Parallax
                                 bgImage={image1} 
                                 strength={200}
@@ -67,7 +86,7 @@ export default function Contact() {
                         <Col md="6">
                             <h3 className="join-header">Join the RestEasy Ecosystem</h3>
                             <div className="section">
-                                <Form >
+                                <Form onSubmit={event => addUser(event, formData)}>
                                     <Form.Row>
                                         <Col>
                                             <Form.Control required placeholder={firstName.length >= 0 ? "First Name" : firstName} onChange={e => setFirstName(e.target.value)} />
@@ -118,7 +137,7 @@ export default function Contact() {
                         </Col>
                     </Row>
                     <Row>
-                        <Col style={{ "padding-left": 0, "padding-right": 0 }}>
+                        <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
                             <Footer />
                         </Col>
                     </Row>
