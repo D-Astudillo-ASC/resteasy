@@ -39,6 +39,17 @@ a {
 a:hover {
     color: var(--Color2);
 }
+.section {
+    background-color: white;
+    visibility: visible;
+    min-height: 250px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 30px;
+}
 
 
 /* Vanilla CSS for div text that many files would be using */

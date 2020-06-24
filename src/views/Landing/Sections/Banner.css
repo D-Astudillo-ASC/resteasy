@@ -25,7 +25,7 @@
 }
   
 /* If the screen size is 750px wide or less (mobile)*/
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 750px) {
     .header {
         font-size: 25px;
     }
@@ -48,7 +48,7 @@
         font-weight: normal;
         font-size: 14px;
     }
-    .parallax {
+    .image-section {
         padding-top: 4%;
         background-image: url("../../../assets/img/green-1072828_gradientDarker.jpg");
         visibility: visible;
@@ -67,7 +67,7 @@
     .vertical-line {
         border-left: 6px solid var(--Color1);
     }
-    .parallax{
+    .image-section{
         min-height: 600px;
     }
 }
@@ -97,7 +97,7 @@
 
 }
 
-.parallax {
+.image-section {
     padding-top: 4%;
     background-image: url("../../../assets/img/green-1072828_gradientDarker.jpg");
     visibility: visible;
