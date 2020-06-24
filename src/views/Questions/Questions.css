@@ -1,4 +1,4 @@
-@import "../../styles.css";
+@import "../../styles/styles.css";
 
 .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
     background: var(--Color1);

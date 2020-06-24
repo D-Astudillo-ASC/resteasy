@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles.css';
+import './styles/styles.css';
 import "antd/dist/antd.css";
 import './assets/fonts/euphemia.ttf';
 import App from './App';

@@ -1,7 +1,7 @@
 import React, {Component, lazy, Suspense} from 'react';
 import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
 
-import './styles.css'
+import './styles/styles.css'
 import RouteList from './routelist.js'
 
 /* From the last dev. Not sure what it does.
@@ -45,7 +45,7 @@ class App extends Component {
                 <BrowserRouter>
                 <Suspense
                     fallback={
-                        <div className="absoluteMiddle">
+                        <div className="absolute-middle">
                             Loading...
                         </div>
                     }

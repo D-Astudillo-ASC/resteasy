@@ -1,0 +1,109 @@
+@import "../../../styles/stylesWithButtons.css";
+
+/* If the screen size is 601px wide or more (standard)*/
+@media screen and (min-width: 992px) {
+    .header {
+        font-size: 65px;
+    }
+    .button-row{
+        display: flex;
+        margin-top: 55px
+    }
+    .button-links {
+        font-size: 35px;
+        width: 37vh;
+        line-height: 1;
+    }
+    .sub-btn {
+        font-weight: normal;
+        font-size: 15px;
+    }
+    .vertical-line {
+        border-left: 6px solid var(--Color1);
+    }
+    
+}
+  
+/* If the screen size is 750px wide or less (mobile)*/
+@media screen and (max-width: 750px) {
+    .header {
+        font-size: 25px;
+    }
+    .button-links {
+        font-size: 18px;
+    }
+    .button-links:hover {
+        background-color: white;
+        color: var(--Color1);
+        border-color: white;
+    }
+    .middle {
+        margin-top: 0px;
+        font-size: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+        
+    }
+    .sub-btn {
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .parallax {
+        padding-top: 4%;
+        background-image: url("../../../assets/img/green-1072828_gradientDarker.jpg");
+        visibility: visible;
+        max-height: none;
+        height: 60%;
+        width: 100%;
+        overflow: hidden;
+      }
+      .vertical-line {
+        border-left: 6px solid var(--Color1);
+    }
+    
+}
+/* even smaller */
+@media screen and (max-width: 582px) {
+    .vertical-line {
+        border-left: 6px solid var(--Color1);
+    }
+    .parallax{
+        min-height: 600px;
+    }
+}
+
+.header {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 35px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    text-align: left;
+
+}
+.section {
+    background-color: white;
+    height: 100%
+}
+.middle {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: white;
+
+}
+.middle .line {
+    border-radius: 10px;
+
+}
+
+.parallax {
+    padding-top: 4%;
+    background-image: url("../../../assets/img/green-1072828_gradientDarker.jpg");
+    visibility: visible;
+    min-height: 900px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: 100% 100%;
+  }
