@@ -6,8 +6,8 @@ import "../../../styles/stylesWithButtons.css"
 function ResourcesHeader(){
     return (
         <div className="centered-text">
-            <h1 className="color1-text"> <b> Find </b> </h1>
-            <h3 className="color3-text"> advice and resources to help </h3>
+            <h1 className="color1-text" style={{fontSize: "54px"}}> <b> Find </b> </h1>
+            <h3 className="color2-text"> advice and resources to help </h3>
         </div>
     )
 }
@@ -62,13 +62,15 @@ function ResourcesAction(){
 class Resources extends React.Component {
     render() {
         return (
-            <div>
+            <div style={{backgroundColor: "var(--Color4)"}}>
+                <br />
                 <ResourcesHeader />
                 <br />
                 <ResourcesText />
                 <br />
                 <br />
                 <ResourcesAction />
+                <br />
             </div>
         )
     }

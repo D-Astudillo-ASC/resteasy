@@ -6,8 +6,8 @@ import "../../../styles/stylesWithButtons.css"
 function CreateHeader(){
     return (
         <div className="centered-text">
-            <h1 className="color1-text"> <b> Create </b> </h1>
-            <h3 className="color3-text"> a Forever Memory </h3>
+            <h1 className="color1-text" style={{fontSize: "54px"}}> <b> Create </b> </h1>
+            <h3 className="color2-text"> a Forever Memory </h3>
         </div>
     )
 }
@@ -57,20 +57,17 @@ function CreateAction(){
                 <Row>
                     <Col md="2" />
                     <Col md="4">
-                        <Button className="button-links center" style={{fontSize: "30px", width: "100%", height: "100%", padding: "60px"}}>
+                        <div style={{fontSize: "30px", width: "100%", height: "100%", padding: "60px", border: "solid"}}>
                             One time charge.
                             <br />
                             <br />
-                            <br />
                             Remember forever.
-                        </Button>
+                        </div>
                     </Col>
                     <Col md="4">
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <h3> {'\u2192'} Build Your Forever Memory Now </h3>
+                        <Button className="button-links center" style={{fontSize: "25px", width: "100%", height: "100%", padding: "0px", border: "none"}}>
+                            {'\u2192'} Build Your Forever Memory Now
+                        </Button>
                     </Col>
                     <Col md="2" />
                 </Row>
@@ -91,7 +88,8 @@ function CreateExtras(){
 class Create extends React.Component {
     render() {
         return (
-            <div>
+            <div style={{backgroundColor: "var(--Color4)"}}>
+                <br />
                 <CreateHeader />
                 <br />
                 <CreateText />
@@ -99,6 +97,7 @@ class Create extends React.Component {
                 <CreateAction />
                 <br />
                 <CreateExtras />
+                <br />
             </div>
         )
     }

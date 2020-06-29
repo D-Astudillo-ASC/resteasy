@@ -11,8 +11,6 @@ import {
   } from "react-bootstrap";
 
 
-const image1 = require("../../../assets/img/away-3668344_1920_cropped.jpg")
-
 export default class Carousel extends React.Component{
     constructor(props){
         super(props)
@@ -33,7 +31,7 @@ export default class Carousel extends React.Component{
                                 <Container>
                                     <Row>
                                         <Col>
-                                            <div className="header">We are sorry you are here, <br/> but happy you found us!</div>
+                                            <div className="headerText">We are sorry you are here, <br/> but happy you found us!</div>
                                         </Col>
                                     </Row>
                                     <Row className="middle">
@@ -60,13 +58,13 @@ export default class Carousel extends React.Component{
                                     </Row>
                                     <Row className="button-row">
                                         <Col sm="4" className="text-center">
-                                            <Button className="button-links" onClick={this.state.createScroll}>CREATE <br/> <span className="sub-btn">A Digital Memory</span></Button>
+                                            <Button className="header-btn" onClick={this.state.createScroll}>CREATE <br/> <span className="sub-btn">A Digital Memory</span></Button>
                                         </Col>
                                         <Col sm="4" className="text-center">
-                                            <Button className="button-links" onClick={this.state.registerScroll}>REGISTER <br/> <span className="sub-btn">For What You Need</span></Button>
+                                            <Button className="header-btn" onClick={this.state.registerScroll}>REGISTER <br/> <span className="sub-btn">For What You Need</span></Button>
                                         </Col >
                                         <Col sm="4" className="text-center">
-                                            <Button className="button-links" onClick={this.state.resourcesScroll}>FIND <br/> <span className="sub-btn">Advice and Resources</span></Button>
+                                            <Button className="header-btn" onClick={this.state.resourcesScroll}>FIND <br/> <span className="sub-btn">Advice and Resources</span></Button>
                                         </Col>
                                     </Row>
                                 </Container>

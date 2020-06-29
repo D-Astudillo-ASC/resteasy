@@ -39,15 +39,10 @@ class Landing extends React.Component {
                         registerScroll={() => this.state.registerRef.current.scrollIntoView({behavior: "smooth"})}
                         resourcesScroll={() => this.state.resourcesRef.current.scrollIntoView({behavior: "smooth"})}
                     />
-                    <LandingDivider />
                     <div className="section"> <HowItWorks /> </div>
-                    <LandingDivider />
                     <div ref={this.state.createRef}> <Create /> </div>
-                    <LandingDivider />
                     <div ref={this.state.registerRef}> <Register /> </div>
-                    <LandingDivider />
                     <div ref={this.state.resourcesRef}> <Resources /> </div>
-                    <LandingDivider />
                     <FAQ />
                 </div>
             }/>

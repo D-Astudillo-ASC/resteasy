@@ -1,94 +1,19 @@
-@import "../../../styles/stylesWithButtons.css";
+@import "../../../styles/styles.css";
 
-/* If the screen size is 601px wide or more (standard)*/
-@media screen and (min-width: 992px) {
-    .header {
-        font-size: 65px;
-    }
-    .button-row{
-        display: flex;
-        margin-top: 55px
-    }
-    .button-links {
-        font-size: 35px;
-        width: 37vh;
-        line-height: 1;
-    }
-    .sub-btn {
-        font-weight: normal;
-        font-size: 15px;
-    }
-    .vertical-line {
-        border-left: 6px solid var(--Color1);
-    }
-    
-}
-  
-/* If the screen size is 750px wide or less (mobile)*/
-@media screen and (max-width: 750px) {
-    .header {
-        font-size: 25px;
-    }
-    .button-links {
-        font-size: 18px;
-    }
-    .button-links:hover {
-        background-color: white;
-        color: var(--Color1);
-        border-color: white;
-    }
-    .middle {
-        margin-top: 0px;
-        font-size: 15px;
-        margin-left: 5px;
-        margin-right: 5px;
-        
-    }
-    .sub-btn {
-        font-weight: normal;
-        font-size: 14px;
-    }
-    .image-section {
-        padding-top: 4%;
-        background-image: url("../../../assets/img/green-1072828_gradientDarker.jpg");
-        visibility: visible;
-        max-height: none;
-        height: 60%;
-        width: 100%;
-        overflow: hidden;
-      }
-      .vertical-line {
-        border-left: 6px solid var(--Color1);
-    }
-    
-}
-/* even smaller */
-@media screen and (max-width: 582px) {
-    .vertical-line {
-        border-left: 6px solid var(--Color1);
-    }
-    .image-section{
-        min-height: 600px;
-    }
-}
-
-.header {
+.headerText {
     color: white;
     font-weight: bold;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     padding-bottom: 5px;
     border-radius: 10px;
     text-align: left;
+    font-size: 45px;
+    margin-top: 20px;
 
 }
-.section {
-    background-color: white;
-    height: 100%
-}
 .middle {
-    font-size: 25px;
+    font-size: 24px;
     margin-top: 5px;
-    margin-bottom: 25px;
     color: white;
 
 }
@@ -98,12 +23,134 @@
 }
 
 .image-section {
-    padding-top: 4%;
-    background-image: url("../../../assets/img/green-1072828_gradientDarker.jpg");
+    margin-top: 76px;
+    background-image: url("../../../assets/img/tree_light_green_gradient.jpg");
     visibility: visible;
-    min-height: 900px;
-    height: 100%;
+    height: 500px;
     width: 100%;
     overflow: hidden;
     background-size: 100% 100%;
   }
+.button-row{
+    display: flex;
+    margin-top: 40px
+}
+.header-btn {
+    font-weight: bold;
+    background-color: transparent;
+    border-width: 2px;
+    border-radius: 9px;
+    font-size: 25px;
+    line-height: 1;
+    width: 250px;
+    border-color: var(--Color1);
+    color: var(--Color1);
+    background-color: transparent;
+    border: solid;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+.header-btn:hover {
+    color: var(--Color5);
+    background-color: var(--Color1);
+    border-color: var(--Color1);
+}
+.header-btn:focus {
+    color: var(--Color5);
+    background-color: var(--Color1);
+    border-color: var(--Color1);
+}
+.header-btn:active {
+    color: var(--Color5);
+    background-color: var(--Color1);
+    border-color: var(--Color1);
+}
+
+.sub-btn {
+    font-weight: normal;
+    font-size: 15px;
+}
+.vertical-line {
+    border-left: 6px solid var(--Color1);
+}
+    
+  
+/* If the screen size is 992px wide or less (small screen)*/
+@media screen and (max-width: 992px) {
+    .headerText {
+        font-size: 35px;
+    }
+    .header-btn {
+        font-weight: bold;
+        background-color: transparent;
+        border-width: 2px;
+        border-radius: 9px;
+        font-size: 20px;
+        line-height: 1;
+        width: 220px;
+        border-color: var(--Color1);
+        color: var(--Color1);
+        background-color: var(--Color5);
+        border: solid;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        
+    }
+    .header-btn:hover {
+        background-color: white;
+        color: rgba(16, 131, 16, 0.74);
+        border-color: white;
+    }
+    .middle {
+        margin-top: 0px;
+        font-size: 18px;
+        margin-left: 5px;
+        margin-right: 5px;
+        
+    }
+    .sub-btn {
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .image-section {
+        padding-top: 5px;
+        background-image: url("../../../assets/img/tree_light_green_gradient.jpg");
+        visibility: visible;
+        max-height: 450px;
+        width: 100%;
+        overflow: hidden;
+      }
+      .vertical-line {
+        border-left: 6px solid rgba(16, 131, 16, 0.74);
+    }
+    
+}
+/* even smaller */
+@media screen and (max-width: 770px) {
+    .header-btn {
+        margin-top: 8px;
+        border-width: 3px;
+        display: inline-block;
+    }
+    .vertical-line {
+        border-left: 6px solid rgba(16, 131, 16, 0.74);
+    }
+    .image-section {
+        min-height: 600px;
+    }
+    .middle {
+        margin-top: 0px;
+        font-size: 18px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .sub-btn {
+        font-weight: normal;
+        font-size: 14px;
+    }
+}

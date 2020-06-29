@@ -15,7 +15,8 @@ a:hover {
         background-color: var(--Color5);
         font-weight: bold;
         background-color: transparent;
-        border-width: 5px;
+        border-width: 2px;
+        border-radius: 9px;
     }
     .button-links:hover {
         color: var(--Color5);

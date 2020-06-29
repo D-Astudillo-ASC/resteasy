@@ -6,8 +6,8 @@ import "../../../styles/stylesWithButtons.css"
 function RegisterHeader(){
     return (
         <div className="centered-text">
-            <h1 className="color1-text"> <b> Register </b> </h1>
-            <h3 className="color3-text"> for what you need </h3>
+            <h1 className="color1-text" style={{fontSize: "54px"}}> <b> Register </b> </h1>
+            <h3 className="color2-text"> for what you need </h3>
         </div>
     )
 }
@@ -94,11 +94,13 @@ class Register extends React.Component {
     render() {
         return (
             <div>
+                <br />
                 <RegisterHeader />
                 <br />
                 <RegisterDescriptions />
                 <br />
                 <RegisterButtons />
+                <br />
             </div>
         )
     }
