@@ -1,0 +1,67 @@
+#uploadMedia{
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  text-align: center;
+  padding: 10vh 0;
+  background: #fafafa;
+
+  #title{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  #card{
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.1);
+    border-radius: 1rem;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 50vw;
+
+    #uploader{
+      width: 40vw;
+    }
+  }
+}
+
+#bannerDiv {
+  #bannerImg {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    background-image: url("/img/memorial-background.jpg");
+    overflow: hidden;
+
+    #title {
+      font-size: 2rem;
+      color: white;
+      font-weight: bold;
+    }
+
+    #date {
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+
+  #guest_msg{
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+  }
+}
+
+#itemsDiv{
+  padding: 10vh 10vw;
+}
+
+.loadingDiv{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

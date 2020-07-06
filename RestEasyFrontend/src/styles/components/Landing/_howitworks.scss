@@ -1,0 +1,33 @@
+#howRoot{
+  padding-bottom: 3rem;
+
+  #title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+  }
+
+  .cardHow {
+    border-radius: 1rem;
+    padding-top: 1rem;
+
+    .symbol {
+      font-size: 4rem;
+    }
+
+    .step{
+      text-align: center;
+    }
+
+    .text{
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}

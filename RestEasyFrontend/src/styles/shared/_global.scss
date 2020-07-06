@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Euphemia';
+  src: local('Euphemia'), url('/fonts/euphemia.ttf') format('truetype');
+}
+
+* {
+  font-family: Euphemia, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.flexSpaceBetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexVCenter{
+  display: flex;
+  align-items: center;
+}
+
+.myButton {
+  background-color: #4a9532 !important;
+  border-color: #4a9532 !important;
+}
+
+.myButton:hover {
+  background-color: #4cc247 !important;
+  border-color: #4cc247 !important;
+  color: white !important;
+}
+
+.myButton:focus {
+  background-color: #4cc247 !important;
+  border-color: #4cc247 !important;
+  color: white !important;
+}
+
+.myInput{
+  max-width: 20vw;
+  min-width: 6em;
+}
+
+.myInput:hover {
+  border-color: #4cc247 !important;
+}
+
+.myInput:focus {
+  border-color: #4cc247 !important;
+}
+
+.fullWidth{
+  width: 100%;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.s {
+  font-size: small;
+}
+
+.m {
+  font-size: medium;
+}
+
+.l {
+  font-size: large;
+}
+
+.xl {
+  font-size: x-large;
+}
+
+.xxl {
+  font-size: xx-large;
+}
+
+.root {
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+}
+
+.center{
+  text-align: center;
+}

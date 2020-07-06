@@ -1,0 +1,36 @@
+#reviewRoot {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  #title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    padding-bottom: 1rem;
+  }
+
+  .slider{
+    width: 80vw;
+
+    .slick-prev:before{
+      color: darkgray;
+    }
+
+    .slick-next:before{
+      color: darkgray;
+    }
+  }
+
+  .cardSamples {
+    margin-bottom: 1rem !important;
+    margin-top: 1rem !important;
+    margin-left: 1rem !important;
+    border-radius: 1rem;
+    border: 1px solid lightgray;
+    width: 25vw !important;
+    height: 15vw !important;
+  }
+}

@@ -1,0 +1,33 @@
+#qnConDiv {
+    background: white;
+
+    #customHeader {
+
+        #steps {
+            padding: 5vh 0 2.5vh 0;
+
+            .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+                background: #4cc247;
+            }
+
+            .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+                background: #4cc247;
+            }
+
+            .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+                background: #4cc247;
+            }
+        }
+    }
+
+    .qnSlider {
+        background: #fafafa;
+        padding: 5vh 8vw;
+    }
+}
+
+.flexHCenter{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+}

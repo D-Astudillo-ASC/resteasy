@@ -1,0 +1,39 @@
+#loginImg {
+  width: 70vmin;
+  height: auto;
+}
+
+#signupImg {
+  width: auto;
+  height: 60vmin;
+}
+
+#loginBody{
+  background: #fafafa;
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#loginForm{
+  padding: 2em;
+  background: white;
+  border-radius: 0.75em;
+  box-shadow: 1px 1px #eee;
+  border: 1px solid #eee;
+
+  .fname{
+    display: inline-block;
+    width: 38%;
+    margin-right: 2%;
+    margin-bottom: 0 !important;
+  }
+
+  .lname{
+    display: inline-block;
+    width: 38%;
+    margin-bottom: 0 !important;
+  }
+
+}

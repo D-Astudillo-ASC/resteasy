@@ -1,0 +1,44 @@
+{
+  "name": "resteasy",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.0.6",
+    "@ant-design/react-slick": "^0.25.5",
+    "antd": "^4.0.1",
+    "history": "^4.10.1",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "3.4.0",
+    "react-spinners": "^0.8.0",
+    "react-stripe-checkout": "^2.6.3"
+  },
+  "engines": {
+    "yarn": "1.x"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

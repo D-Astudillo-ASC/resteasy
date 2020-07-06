@@ -1,0 +1,31 @@
+#rootFAQ{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  background: rgba(0,0,0,0.05);
+
+  #title{
+    color: #222;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .mrow{
+    margin-bottom: 1rem;
+  }
+
+  .question{
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+
+  .answer{
+    font-size: 1rem;
+    letter-spacing: 0.1px;
+    word-spacing: 2px;
+  }
+}
