@@ -1,0 +1,26 @@
+#mFooter{
+  background: rgba(20, 110, 0, 1);
+  padding: 0;
+
+  .mDiv{
+    padding: 0;
+    margin: 0;
+  }
+
+  #con1{
+    color: white;
+
+  }
+
+  #con2{
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    a{
+      color: white;
+    }
+  }
+}

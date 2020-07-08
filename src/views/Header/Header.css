@@ -1,4 +1,4 @@
-@import "../../styles.css";
+@import "../../styles/styles.css";
 
 .title{
     font-size: 30px;
@@ -17,4 +17,7 @@
 
 #btnGroupAddon {
     border-radius: 4px;
+}
+.header {
+    margin-bottom: 76px;
 }

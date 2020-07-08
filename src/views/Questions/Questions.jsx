@@ -1,28 +1,27 @@
 import React, {lazy} from 'react';
 import {Layout, Popover, Steps} from "antd";
 import "./Questions.css"
-import Header from "../Header/Header";
+import PageWrapper from "../../PageWrapper"
 
-const Q0 = lazy(() => import('./Sections/Q0'));
-const Q1 = lazy(() => import('./Sections/Q1'));
-const Q2 = lazy(() => import('./Sections/Q2'));
-const Q3 = lazy(() => import('./Sections/Q3'));
-const Q4 = lazy(() => import('./Sections/Q4'));
-const Q5 = lazy(() => import('./Sections/Q5'));
-const Q6 = lazy(() => import('./Sections/Q6'));
-const Q7 = lazy(() => import('./Sections/Q7'));
-const Q8 = lazy(() => import('./Sections/Q8'));
-const Q9 = lazy(() => import('./Sections/Q9'));
-const Q10 = lazy(() => import('./Sections/Q10'));
-const Q11 = lazy(() => import('./Sections/Q11'));
-const Q12 = lazy(() => import('./Sections/Q12'));
-const Q13 = lazy(() => import('./Sections/Q13'));
+const Q0 = lazy(() => import('./Sections/Q0')); //getting started
+const Q1 = lazy(() => import('./Sections/Q1')); //name
+const Q2 = lazy(() => import('./Sections/Q2')); //dates
+const Q3 = lazy(() => import('./Sections/Q3')); //relation
+const Q4 = lazy(() => import('./Sections/Q4')); //funeral service
+const Q5 = lazy(() => import('./Sections/Q5')); //describe person
+const Q6 = lazy(() => import('./Sections/Q6')); //share memories
+const Q7 = lazy(() => import('./Sections/Q7')); //soundtrack
+const Q8 = lazy(() => import('./Sections/Q8')); //template
+const Q9 = lazy(() => import('./Sections/Q9')); //registry flow
+const Q10 = lazy(() => import('./Sections/Q10')); //preview
+const Q11 = lazy(() => import('./Sections/Q11')); //pay (slide 14 and 15 in ppt)
+const Q12 = lazy(() => import('./Sections/Q12')); //share
 
 
 const description = [
     "Enter information about memorial",
     "Tell us how you'll design your page",
-    "Make the cash registry",
+    "Preview what your page will look like",
     "Complete the payment",
     "Share the memorial with your loved ones",
 ];
@@ -44,16 +43,16 @@ class Questions extends React.Component {
             return 0;
         else if (7 <= this.state.curr && this.state.curr <= 9)
             return 1;
-        else if (10 <= this.state.curr && this.state.curr <= 11)
+        else if (this.state.curr === 10)
             return 2;
-        else if (this.state.curr === 12)
+        else if (this.state.curr === 11)
             return 3;
-        else
+        else if (this.state.curr === 12)
             return 4;
     }
 
     getComponent() {
-        if (this.state.curr === 10)
+        if (this.state.curr === 0)
             return <Q0 next={this.next.bind(this)}/>;
         else if (this.state.curr === 1)
             return <Q1 next={this.next.bind(this)} prev={this.prev.bind(this)}/>;
@@ -73,14 +72,12 @@ class Questions extends React.Component {
             return <Q8 next={this.next.bind(this)} prev={this.prev.bind(this)}/>;
         else if (this.state.curr === 9)
             return <Q9 next={this.next.bind(this)} prev={this.prev.bind(this)}/>;
-        else if (this.state.curr === 0)
+        else if (this.state.curr === 10)
             return <Q10 next={this.next.bind(this)} prev={this.prev.bind(this)}/>;
         else if (this.state.curr === 11)
             return <Q11 next={this.next.bind(this)} prev={this.prev.bind(this)}/>;
         else if (this.state.curr === 12)
-            return <Q12 next={this.next.bind(this)} prev={this.prev.bind(this)}/>;
-        else if (this.state.curr === 13)
-            return <Q13 />;
+            return <Q12 />;
     }
 
     next() {
@@ -99,22 +96,20 @@ class Questions extends React.Component {
 
     render() {
         return (
-            <Layout>
-                <Header search={true}/>
-                <Layout.Content style={{background: "white"}}>
+            <PageWrapper content={
+                <div>
                     <Steps progressDot={customDot} current={this.getCurrProgress()} style={{padding: "2.5% 10%"}}>
                         <Steps.Step title="Info"/>
                         <Steps.Step title="Design"/>
-                        <Steps.Step title="Register"/>
+                        <Steps.Step title="Preview"/>
                         <Steps.Step title="Pay"/>
                         <Steps.Step title="Share"/>
                     </Steps>
                     <div style={{marginLeft: "10%", marginRight: "10%", padding:"2.5%"}}>
                         {this.getComponent()}
                     </div>
-                </Layout.Content>
-            </Layout>
-
+                </div>
+            } />
         );
     }
 }

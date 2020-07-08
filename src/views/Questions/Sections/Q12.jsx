@@ -1,57 +1,25 @@
 import React from "react";
-import StripeCheckout from 'react-stripe-checkout';
-import {Button, notification} from "antd";
-import * as constants from "../../../constants";
-import {saveStripeToken} from "../QuestionsAPI";
+import {Typography, Button} from "antd";
 
-export default class Q12 extends React.Component {
-    onToken = (token) => {
-        // console.log(token);
-        saveStripeToken(token.id, token.email)
-            .done((response) => {
-                if (response.success) {
-                    notification.success({
-                        message: 'Payment Successful',
-                        placement: 'bottomRight',
-                    });
-                    this.props.next();
-                } else {
-                    notification.error({
-                        message: 'Payment Failed',
-                        description: response.message,
-                        placement: 'bottomRight',
-                    });
-                }
-            })
-            .fail((error) => {
-                notification.error({
-                    message: 'Payment Failed',
-                    description: (error.responseJSON && error.responseJSON.message) ? error.responseJSON.message : "Something went wrong, Please try again later.",
-                    placement: 'bottomRight',
-                });
-            });
-    };
-
+export default class Q13 extends React.Component {
     render() {
         return (
             <div style={{width: "100%", textAlign: "center"}}>
                 <div style={{fontSize: "2em", marginBottom: "0.5em"}}>
-                    Complete the payment
+                    Publish & Share
                 </div>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                    <StripeCheckout
-                        token={this.onToken}
-                        stripeKey={constants.STRIPE_PUBLIC_KEY}
-                        name="RestEasy"
-                        description="Create a digital memorial"
-                        image="/logo196.png" // the pop-in header image (default none)
-                        panelLabel="Pay" // prepended to the amount in the bottom pay button
-                        amount={100} // cents
-                        currency="USD"
-                    />
+                    <Typography.Title>
+                        URL
+                    </Typography.Title>
                 </div>
-                <div style={{display: "flex", justifyContent: "space-between"}}>
-                    <Button type="primary" onClick={this.props.prev}>Previous</Button>
+                <div style={{textAlign: "center", fontSize: "1.5em", marginTop: "0.5em"}}>
+                    Share this link with family and friends so that they
+                    can add their own memories and contribute
+                </div>
+                <br />
+                <div style={{display: "flex", justifyContent: "center"}}>
+                    <Button type="primary" onClick={this.props.next}>Finish!</Button>
                 </div>
             </div>);
     }

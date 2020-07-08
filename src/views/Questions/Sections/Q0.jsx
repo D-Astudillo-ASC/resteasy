@@ -8,7 +8,7 @@ export default class Q0 extends React.Component {
                 <div style={{fontSize: "2em", marginBottom: "0.5em"}}>
                     First we'll ask you a few questions to help get you started
                 </div>
-                <div style={{display: "flex", justifyContent: "flex-end"}}>
+                <div style={{display: "flex", justifyContent: "center"}}>
                     <Button type="primary" onClick={this.props.next}>Next</Button>
                 </div>
             </div>);

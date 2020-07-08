@@ -1,0 +1,59 @@
+@import "./styles.css";
+
+a {
+    color: var(--Color1);
+}
+a:hover {
+    color: var(--Color2);
+}
+
+/* If the screen size is 601px wide or more (standard)*/
+@media screen and (min-width: 992px) {
+    .button-links {
+        border-color: var(--Color1);
+        color: var(--Color1);
+        background-color: var(--Color5);
+        font-weight: bold;
+        background-color: transparent;
+        border-width: 2px;
+        border-radius: 9px;
+    }
+    .button-links:hover {
+        color: var(--Color5);
+        background-color: var(--Color1);
+        border-color: var(--Color1);
+    }
+    .button-links:focus {
+        color: var(--Color5);
+        background-color: var(--Color1);
+        border-color: var(--Color1);
+    }
+    .button-links:active {
+        color: var(--Color5);
+        background-color: var(--Color1);
+        border-color: var(--Color1);
+    }
+    
+}
+  
+/* If the screen size is 750px wide or less (mobile)*/
+@media screen and (max-width: 750px) {
+    .button-links {
+        border-color: var(--Color1);
+        font-weight: bold;
+        background-color: transparent;
+        border-width: 5px;
+        line-height: 1.5;
+    }
+    .button-links:hover {
+        color: var(--Color5);
+        background-color: var(--Color1);
+    }
+}
+/* even smaller */
+@media screen and (max-width: 582px) {
+    .button-links {
+        margin-top: 8px;
+        border-width: 3px;
+    }
+}

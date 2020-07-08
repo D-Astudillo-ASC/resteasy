@@ -1,16 +1,14 @@
-@import "../../styles.css";
+@import "../../styles/styles.css";
 
 .header{
     margin-bottom: 20px;
+    margin-top:35px
 }
 .form-row{
     margin-bottom: 10px
 }
 .grey-section {
-    margin-top: 20px;
-    background-color: rgba(235, 235, 235, 0.705);
-    height:150px;
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.705);
     justify-content: center;
     align-items: center;
 }
@@ -20,14 +18,16 @@
     color: rgb(0, 161, 48);
     text-align: center;
 }
-
-.bottom{
-    margin-top: 20px;
-    background-color: rgb(235, 235, 235);
+.section-form {
+    background-color: white;
+    visibility: visible;
+    min-height: 250px;
+    width: 100%;
+    overflow: hidden;
     text-align: center;
-    height:100px;
+    margin-bottom: 25px;
+    padding: 30px;
 }
-.section {
-    margin-top: 25px;
-    margin-bottom: 30px
+.in-touch {
+    margin-bottom: 35px;
 }

@@ -83,7 +83,7 @@ export default function Contact() {
                     <Row className="justify-content-md-center">
                         <Col md="6">
                             <h3 className="join-header">Join the RestEasy Ecosystem</h3>
-                            <div className="section">
+                            <div className="section-form">
                                 <Form onSubmit={event => addUser(event, formData)}>
                                     <Form.Row>
                                         <Col>
@@ -127,9 +127,9 @@ export default function Contact() {
                             </div>
                         </Col>
                     </Row>
-                    <Row className="grey-section">
-                        <Col md={12} >
-                            <div className="emphasis center">
+                    <Row className="justify-content-md-center">
+                        <Col md="12" >
+                            <div className="center in-touch">
                                 <h2>We will be in touch soon!</h2>
                             </div>
                         </Col>

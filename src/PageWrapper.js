@@ -1,17 +1,16 @@
 import React, {Component, lazy, Suspense} from 'react';
 import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
-import {Divider, Layout} from 'antd';
 
 import Header from './views/Header/Header'
 import Footer from './views/Footer/Footer'
 
 function PageWrapper(props){
     return(
-        <Layout>
+        <div style={{height: "100%", backgroundColor: "white"}}>
             <Header search={true}/>
-            {props.content}
+            <div style={{minHeight: "calc(100vh - 70px)", margin: "0"}}> {props.content} </div>
             <Footer />
-        </Layout>
+        </div>
     )
 }
 

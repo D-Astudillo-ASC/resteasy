@@ -16,7 +16,7 @@ export default class Q9 extends React.Component {
         return (
             <div style={{width: "100%", textAlign: "center"}}>
                 <div style={{fontSize: "2em", marginBottom: "0.5em"}}>
-                    Overview
+                    Registry Flow
                 </div>
                 <div style={{display: "flex", justifyContent: "center"}}>
                     <Card>

@@ -1,0 +1,48 @@
+#rootSamples {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background: rgba(0,0,0,0.05);
+
+  #title{
+    color: #222;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  #mrow{
+    width: 100%;
+  }
+
+  #description{
+    color: #444;
+    font-size: 1.5rem;
+  }
+
+  .slider{
+    width: 25vw;
+
+    .slick-prev:before{
+      color: darkgray;
+      font-size: 2rem;
+      margin-left: -1rem;
+    }
+
+    .slick-next:before{
+      color: darkgray;
+      font-size: 2rem;
+    }
+  }
+
+  .cardSamples {
+    border-radius: 1rem;
+
+    .imgSamples {
+      border-radius: 1rem;
+      max-height: 60vh !important;
+    }
+  }
+}

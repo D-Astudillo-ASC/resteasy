@@ -1,0 +1,17 @@
+.how-it-works {
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 54px
+}
+
+
+/* If the browser window is smaller than 600px, make the columns stack on top of each other */
+@media only screen and (max-width: 767px) {
+    .boxes {
+      display: block;
+      width: 100%;
+    }
+    .how-it-works {
+        text-align: center;
+    }
+  }
