@@ -30,14 +30,13 @@ app.use(bodyParser.json());
 app.use(cors())
 
 // use JWT auth to secure the api
-app.use(jwt());
-console.log("authenticated")
+
 
 // api routes
-app.use('/users', require('./users/users.controller'));
-app.use('/payment', require('./payment/payment.controller'))
-app.use('/aws', require('./aws/aws.controller.js'))
-app.use('/templates', require('./templates/templates.controller'))
+app.use('/users',jwt(), require('./users/users.controller'));
+app.use('/payment',jwt(), require('./payment/payment.controller'))
+app.use('/aws',jwt(), require('./aws/aws.controller.js'))
+app.use('/templates',jwt(), require('./templates/templates.controller'))
 
 app.use(errorHandler);
 
