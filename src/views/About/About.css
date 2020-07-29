@@ -1,0 +1,90 @@
+@import "../../styles/styles.css";
+
+.main-container{
+    margin-bottom: 20px;
+    background-image: linear-gradient(
+        180deg, 
+        rgba(44, 44, 44, 0.712) 10%, 
+        rgba(68, 68, 68, 0.29) 38.36%, 
+        rgba(255, 255, 255, 0) 121.27%),
+        url("../../assets/img/forest_walk3.jpg");
+        visibility: visible;
+        height: 500px;
+        width: 100%;
+        overflow: hidden;
+        background-size: 100% 100%;
+}
+.sub-header {
+    /* We've been there */
+    position: absolute;
+    width: 400px;
+    height: 59px;
+    top: 195px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.header-description {
+    /* When the founders of RestEasy experienced our own personal losses, we each noted serious flaws in the memorial process, starting with “What do I do now?” */
+    position: absolute;
+    width: 634px;
+    height: 95px;
+    top: 275px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.black{
+    color: black;
+}
+
+.tagline{
+    /* Commemoration is expensive. We are often conflicted between wanting the 
+    best for our loved ones and the high cost of the best. The RestEasy Registry
+    feature is designed to eliminate that conflict. */
+
+
+    width: 1000px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    align-items: center;
+    text-align: center;
+
+    color: #7B7B7B;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.profile-img {
+    box-shadow: 3px 3px 6px rgb(102, 102, 102);
+}
+
+.profiles {
+    background-color: rgb(240, 240, 240);
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+.founder {
+    margin-bottom: 50px;
+    color: #616161;
+}
+.description{
+    margin-top: 60px;
+}

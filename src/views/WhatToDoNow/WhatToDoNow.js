@@ -2,13 +2,21 @@ import React from 'react';
 import {Button, Form, Container, Row, Col} from "react-bootstrap";
 import PageWrapper from "../../PageWrapper"
 import "../../styles/styles.css"
+import "./WhatToDoNow.css"
 
 export default function LoginForm() {
     return (
         <PageWrapper content={
             <div>
-                <br />
-                <h1 className="emphasis-text centered-text" style={{color: "var(--Color1)"}}> What To Do Now </h1>
+                <Container fluid={true} className="header-banner">
+                    <Row className="justify-content-center">
+                        <Col className="d-flex justify-content-center" style={{ "paddingLeft": 0, "paddingRight": 0 }}>
+                            <div className="sub-header-top">
+                                What To Do Now?
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
                 <br />
                 <Container fluid={true}>
                     <Row className="justify-content-md-center">
@@ -71,8 +79,8 @@ export default function LoginForm() {
                             <br />
 
                             Although not your only option,
-                            we think a <a className="color1-text underline-text" href="/my/create">Digital Memory </a>
-                            is a great way to accomplish all this – that’s why we built it.
+                            we think a <a className="color1-text underline-text" href="/templatedigitalmemory">Digital Memory</a> is
+                            a great way to accomplish all this – that’s why we built it.
                             <Row className="justify-content-md-center">
                                 <Col md="1" style={{textAlign: "right"}}> 1) </Col>
                                 <Col md="11">

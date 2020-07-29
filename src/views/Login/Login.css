@@ -34,3 +34,8 @@ a {
     background-color: var(--Color1);
     border-color: var(--Color1);
 }
+.header-banner{
+    margin-bottom: 20px;
+    background-color: black;
+    height: 120px;
+}

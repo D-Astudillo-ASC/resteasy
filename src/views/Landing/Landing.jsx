@@ -3,7 +3,7 @@ import {Divider, Layout} from 'antd';
 
 import "../../styles/styles.css"
 
-import FAQ from "./Sections/FAQ";
+
 import Banner from "./Sections/Banner";
 import HowItWorks from "./Sections/HowItWorks";
 import Create from "./Sections/Create"
@@ -51,7 +51,7 @@ class Landing extends React.Component {
                     <div ref={this.state.createRef}> <Create /> </div>
                     <div ref={this.state.registerRef}> <Register /> </div>
                     <div ref={this.state.resourcesRef}> <Resources /> </div>
-                    <FAQ />
+                    {/* <FAQ /> */}
                 </div>
             }/>
         );

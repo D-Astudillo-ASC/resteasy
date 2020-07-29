@@ -1,26 +1,29 @@
 const $ = require('jquery');
 
 const uploadMedia = (file) => {
-    let formData = new FormData();
 
-    formData.append('file', file);
+    
 
-    const url = '/api/uploadMedia/';
-    const dfd = new $.Deferred();
+    // let formData = new FormData();
 
-    $.ajax({
-        url,
-        type: 'POST',
-        contentType: false,
-        data: formData,
-        cache: false,
-        processData: false,
-    }).done(function (response) {
-        dfd.resolve(response);
-    }).fail(function(jqXHR, textStatus, errorThrown) {
-        dfd.reject(jqXHR);
-    });
-    return dfd.promise();
+    // formData.append('file', file);
+
+    // const url = '/api/uploadMedia/';
+    // const dfd = new $.Deferred();
+
+    // $.ajax({
+    //     url,
+    //     type: 'POST',
+    //     contentType: false,
+    //     data: formData,
+    //     cache: false,
+    //     processData: false,
+    // }).done(function (response) {
+    //     dfd.resolve(response);
+    // }).fail(function(jqXHR, textStatus, errorThrown) {
+    //     dfd.reject(jqXHR);
+    // });
+    // return dfd.promise();
 };
 
 const saveStripeToken = (token_id, payee_email) => {

@@ -31,30 +31,29 @@ export default class Carousel extends React.Component{
                                 <Container>
                                     <Row>
                                         <Col>
-                                            <div className="headerText">We are sorry you are here, <br/> but happy you found us!</div>
+                                            <div className="headerText">We are sorry you're here, but happy you found us</div>
                                         </Col>
                                     </Row>
-                                    <Row className="middle">
-                                        <Col sm="0" md="5">
-                                            <div ></div>
-                                        </Col>
-                                        <Col sm="12" md="7" className="line" className="vertical-line">
-                                            <Row>
-                                                <Col>
-                                                    Tell their story.
-                                                </Col>
-                                            </Row>
-                                            <Row >
-                                                <Col>
-                                                    Fund their resting place.
-                                                </Col>
-                                            </Row>
-                                            <Row>
-                                                <Col>
-                                                    Commemorate and celebrate life with RestEasy.
-                                                </Col>
-                                            </Row>
-                                        </Col>
+                                <Row className="middle">
+                                    <Col md="3" />
+                                    <Col md="6" className= "secondary-text">
+                                        <Row>
+                                            <Col>
+                                                Tell their story.
+                                            </Col>
+                                        </Row>
+                                        <Row >
+                                            <Col>
+                                                Fund their resting place.
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col>
+                                                Celebrate and Commemorate their life.
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                    <Col md="3" />
                                     </Row>
                                     <Row className="button-row">
                                         <Col sm="4" className="text-center">

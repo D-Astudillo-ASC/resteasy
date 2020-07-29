@@ -9,15 +9,52 @@
 
 .menu-options {
     padding-top: 10px;
+    color: white;
 }
-
+.search-area{
+    margin-right: 20px;
+    display: block;
+}
 .search-bar {
-    padding-right: 20px;
+    /* margin-right: 30px;
+    background-color: rgba(255, 255, 255, 0.548);
+    border-width: 5;
+    border-radius: 50; */
+    background: rgba(255, 255, 255, 0.445);
+    border: transparent;
+    border-radius: 50px;
+}
+.search-bar:focus {
+    background: rgba(255, 255, 255, 0.336);
+    border: none;
+    color: rgb(255, 255, 255);
+
+}
+.search-bar::placeholder {
+    color: white
+}
+.navBar-custom {
+    background-color: transparent;
+}
+.navBar-custom-dark {
+    background-color: rgba(0, 0, 0, 0.473);
 }
 
-#btnGroupAddon {
-    border-radius: 4px;
+.header-link {
+    color: white;
 }
-.header {
-    margin-bottom: 76px;
+.username {
+    margin-right: 30px;
+}
+.navbar-collapse.show, .navbar-collapse.collapsing{
+    background: rgba(0, 0, 0, 0.952);
+    text-align: center;
+    border-radius: 5%;
+}
+
+.form-inline{
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px
 }

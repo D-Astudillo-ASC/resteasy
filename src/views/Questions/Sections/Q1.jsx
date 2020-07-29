@@ -11,6 +11,16 @@ export default class Q1 extends React.Component {
     };
 
     render() {
+        const inputStyle = {
+            borderRadius: "10px",
+            width: "11em",
+            height: "2em",
+            textAlign: "center",
+            fontSize: "17px",
+            // backgroundColor: "#BEBEBE",
+            // color: "black"
+        }
+
         return (
             <div style={{width: "100%", textAlign: "center"}}>
                 <div style={{fontSize: "2em", marginBottom: "0.5em"}}>
@@ -27,20 +37,23 @@ export default class Q1 extends React.Component {
                                            message: 'Please input first name',
                                        },
                                    ]}>
-                            <Input placeholder="First name" style={{width: "10em"}}/>
+                            <Input placeholder="First name" style={inputStyle}/>
                         </Form.Item>
                         <Form.Item style={{margin:"0em 2em"}} name="middle_name">
-                            <Input placeholder="Middle name" style={{width: "10em"}}/>
+                            <Input placeholder="Middle name" style={inputStyle}/>
                         </Form.Item>
-                        <Form.Item name="last_name">
-                            <Input placeholder="Last name" style={{width: "10em"}}/>
+                        <Form.Item name="last_name" style={inputStyle}>
+                            <Input placeholder="Last name" style={inputStyle}/>
+                        </Form.Item>
+                        <Form.Item style={{margin:"0em 2em"}} name="suffix">
+                            <Input placeholder="Suffix" style={{borderRadius: "10px", width: "5em", height: "2em", textAlign: "center", fontSize: "17px",}}/>
                         </Form.Item>
                     </div>
 
-                    <div style={{display: "flex", justifyContent: "space-between"}}>
-                        <Button type="primary" onClick={this.props.prev}>Previous</Button>
+                    <div style={{display: "flex", justifyContent: "center"}}>
+                        <Button type="primary" onClick={this.props.prev} style={{borderRadius: "10px", marginLeft: "-30px", marginRight: "10px"}}>Back</Button>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit">Next</Button>
+                            <Button type="primary" htmlType="submit" style={{borderRadius: "10px", marginLeft: "10px"}}>Next</Button>
                         </Form.Item>
                     </div>
                 </Form>

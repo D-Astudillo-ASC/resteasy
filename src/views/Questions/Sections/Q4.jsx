@@ -14,34 +14,35 @@ export default class Q4 extends React.Component {
     render() {
         return (
             <div style={{width: "100%", textAlign: "center"}}>
-                <div style={{fontSize: "2em", marginBottom: "0.5em"}}>
-                    Do you want to display funeral/service information on the memorial?
+                <div style={{fontSize: "1.5em", marginBottom: "0.5em"}}>
+                    Do you want to display funeral/service information on the memory?
+                    <h5>This can be removed later.</h5>
                 </div>
                 <Form
                     onFinish={this.saveData}
                     scrollToFirstError>
                     <div style={{display: "flex", justifyContent: "center"}}>
                         <Form.Item name="date">
-                            <DatePicker placeholder="Date" style={{width: "10em"}}/>
+                            <DatePicker placeholder="Date" style={{width: "10em", borderRadius: "10px"}}/>
                         </Form.Item>
                         <Form.Item style={{margin:"0em 2em"}} name="time">
-                            <TimePicker placeholder="Time" style={{width: "10em"}}/>
+                            <TimePicker placeholder="Time" style={{width: "10em", borderRadius: "10px"}}/>
                         </Form.Item>
                         <Form.Item name="location">
-                            <Input placeholder="Location" style={{width: "10em"}}/>
+                            <Input placeholder="Location" style={{width: "10em", borderRadius: "10px"}}/>
                         </Form.Item>
                     </div>
 
                     <div style={{display: "flex", justifyContent: "center"}}>
                         <Form.Item name="description">
-                            <Input.TextArea placeholder="Description" style={{width: "34em"}}/>
+                            <Input.TextArea placeholder="Description/Details" style={{width: "34em", height: "10em", borderRadius: "10px"}}/>
                         </Form.Item>
                     </div>
 
-                    <div style={{display: "flex", justifyContent: "space-between"}}>
-                        <Button type="primary" onClick={this.props.prev}>Previous</Button>
+                    <div style={{display: "flex", justifyContent: "center"}}>
+                        <Button type="primary" onClick={this.props.prev} style={{marginRight: "10px", borderRadius: "10px"}}>Previous</Button>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit">Skip/Next</Button>
+                            <Button type="primary" htmlType="submit" style={{marginLeft: "10px", borderRadius: "10px"}}>Skip/Next</Button>
                         </Form.Item>
                     </div>
                 </Form>

@@ -11,7 +11,7 @@ export default class Q7 extends React.Component {
     render() {
         return (
             <div style={{width: "100%", textAlign: "center"}}>
-                <div style={{fontSize: "2em", marginBottom: "0.5em"}}>
+                <div style={{fontSize: "1.5em", marginBottom: "0.5em"}}>
                     Add a soundtrack
                 </div>
                 <Form
@@ -25,14 +25,22 @@ export default class Q7 extends React.Component {
                             }
                         ]}>
                             <Input placeholder="Spotify Track Link" style={{width: "15em"}}/>
+                            {/* <Form.Item>
+                                <Button type="primary" htmlType="submit" style={{marginLeft: "10px", borderRadius: "10px"}}>Upload</Button>
+                            </Form.Item> */}
                         </Form.Item>
                     </div>
+                    <br/>
 
-                    <div style={{display: "flex", justifyContent: "space-between"}}>
-                        <Button type="primary" onClick={this.props.prev}>Previous</Button>
-                        <Form.Item>
-                            <Button type="primary" htmlType="submit">Skip/Next</Button>
-                        </Form.Item>
+                    <div>
+                        {/* <iframe src="https://open.spotify.com/track/2ckGH6FtxWeAv0SskcREd1?si=ckrUuDH_Q-ujV58NcwT6ig" 
+                        width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> */}
+                    </div>
+
+                    <div style={{display: "flex", justifyContent: "center"}}>
+                        <Button type="primary" onClick={this.props.prev} style={{marginRight: "10px", borderRadius: "10px"}}>Previous</Button>
+                    
+                        <Button type="primary" onClick={this.props.next} style={{marginRight: "10px", borderRadius: "10px"}}>Skip/Next</Button>
                     </div>
                 </Form>
             </div>);

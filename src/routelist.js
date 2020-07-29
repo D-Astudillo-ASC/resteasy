@@ -22,7 +22,8 @@ export default [
     {
         id: 5,
         URLpath: "/my/create",
-        dirpath: "./views/Questions/Questions"
+        dirpath: "./views/Questions/Questions",
+        status: "protected"
     },
     {
         id: 6,
@@ -47,11 +48,36 @@ export default [
     {
         id: 10,
         URLpath: "/registry",
-        dirpath: "./views/Registry/Registry"
+        dirpath: "./views/Registry/NewSections_test/NewRegistry"
     },
     {
         id: 11,
         URLpath: "/whattodonow",
         dirpath: "./views/WhatToDoNow/WhatToDoNow"
+    },
+    {
+        id: 12,
+        URLpath: "/templatedigitalmemory",
+        dirpath: "./views/TemplateDigitalMemory/TemplateDigitalMemory",
+    },
+    {
+        id: 13,
+        URLpath: "/templatedigitalmemoryeditor",
+        dirpath: "./views/TemplateDigitalMemory/TemplateDigitalMemoryEditor"
+    },
+    {
+        id: 14,
+        URLpath: "/template2digitalmemory",
+        dirpath: "./views/Template2DigitalMemory/Template2DigitalMemory"
+    },
+    {
+        id: 15,
+        URLpath: "/template2digitalmemoryeditor",
+        dirpath: "./views/Template2DigitalMemory/Template2DigitalMemoryEditor"
+    },
+    {
+        id: 16,
+        URLpath: "/faq",
+        dirpath: "./views/FAQ/FAQ"
     },
 ]

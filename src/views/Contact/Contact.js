@@ -67,19 +67,16 @@ export default function Contact() {
     return (
         <PageWrapper content = {
             <div className="main">
-                <Container fluid={true}>
-                    <Row className="justify-content-md-center header">
-                        <Col style={{ "paddingLeft": 0, "paddingRight": 0 }}>
-                        <Parallax
-                                bgImage={image1} 
-                                strength={200}
-                            >
-                                <div style={{ height: 200 }}>
-                                    <div style={headerStyle}>Learn More About Becoming A <span className="emphasis">Business Partner</span></div>
-                                </div>
-                            </Parallax>
+                <Container fluid={true} className="header-banner">
+                    <Row className="justify-content-center">
+                        <Col className="d-flex justify-content-center" style={{ "paddingLeft": 0, "paddingRight": 0 }}>
+                            <div className="sub-header-top">
+                                Learn More About <br/> Becoming A Business Partner!
+                            </div>
                         </Col>
                     </Row>
+                </Container>
+                <Container>
                     <Row className="justify-content-md-center">
                         <Col md="6">
                             <h3 className="join-header">Join the RestEasy Ecosystem</h3>

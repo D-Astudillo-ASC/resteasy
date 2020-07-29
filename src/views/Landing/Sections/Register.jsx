@@ -1,94 +1,64 @@
 import React from 'react';
 //import {Card, Col, Row} from "antd";
 import {Button, Form, Container, Row, Col} from "react-bootstrap";
+import Step from "./LandingRegistry.js"
 import "../../../styles/stylesWithButtons.css"
+const leftImg = require("../../../assets/img/create_a_registry.PNG")
 
-function RegisterHeader(){
+function RegisterHeader() {
+    const headerStyle = {
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "45px",
+        lineHeight: "67px",
+        textAlign: "center",
+        color: " #5E624E",
+        marginBottom: "30px"
+    }
     return (
-        <div className="centered-text">
-            <h1 className="color1-text" style={{fontSize: "54px"}}> <b> Register </b> </h1>
-            <h3 className="color2-text"> for what you need </h3>
+
+        <div className="centered-text" style={headerStyle}>
+            Register for What You Need
         </div>
     )
 }
 
-function RegisterDescriptions(){
+function RegisterDescriptions() {
     return (
         <div className="centered-text">
             <Container fluid={true}>
-                <Row className="justify-content-md-center">
-                    <Col md="2" />
-                    <Col md="8">
-                        <Row className="justify-content-md-center">
-                            <Col md="3" className="center" style={{border: "solid"}}>
-                                <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
-                                    Harness the power of your community and direct support to the things that matter to you and to them.
-                                </div>
-                            </Col>
-                            <Col md="1" />
-                            <Col md="3" className="center" style={{border: "solid"}}>
-                                <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
-                                    Is someone you know going through a hard time?
-                                    Contributing to their registry is one of the best things you can do in their time of need.
-                                    It guarantees your support goes toward something that truly makes a difference.
-                                </div>
-                            </Col>
-                            <Col md="1" />
-                            <Col md="3" className="center" style={{border: "solid"}}>
-                                <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
-                                    Want to see some of the unique and interesting options to commemorate your loved one?
-                                    <br />
-                                    <br />
-                                    <div style={{lineHeight: "75%"}}>
-                                    <small>
-                                        Hint: You can send their body into space to rest with the stars,
-                                        or have their ashes turned into jewelry so they are with you always
-                                    </small>
-                                    </div>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col md="2" />
+                <Row>
+                <Col md="4" style={{padding: "0px"}}>
+                    <Step 
+                        backgroundImg={leftImg}
+                        header = {'Create a Registry'}
+                        mainText= {'Harness the power of your community and direct support to the things that matter to you and to them.'}
+                    />
+                </Col>
+
+                <Col md="4" style={{padding: "0px"}}>
+                <Step 
+                        backgroundImg={leftImg}
+                        header = {'Find a Registry'}
+                        mainText= {'Is someone you care about in mourning? Contributing to their registry guarantees that your support goes toward something that truly makes a difference.'}
+                    />
+                </Col>
+
+                <Col md="4" style={{padding: "0px"}}>
+                <Step 
+                        backgroundImg={leftImg}
+                        header = {'Browse Creative Commemoration'}
+                        mainText= {'Take a look at some unique ways to commemorate your loved one.'}
+                        subText={ 'Turn their ashes into diamonds or send their body to space to rest with the stars.'}
+                    />
+                </Col>
+              
                 </Row>
             </Container>
         </div>
     )
 }
 
-function RegisterButtons(){
-    return (
-        <div className="centered-text">
-            <Container fluid={true}>
-                <Row className="justify-content-md-center">
-                    <Col md="2" />
-                    <Col md="8">
-                        <Row className="justify-content-md-center" >
-                            <Col md="3" style={{padding: "0px"}}>
-                                <Button className="button-links center" style={{fontSize: "30px", width: "100%", height: "100%"}}>
-                                    Create a Registry
-                                </Button>
-                            </Col>
-                            <Col md="1" />
-                            <Col md="3" style={{padding: "0px"}}>
-                                <Button className="button-links center" style={{fontSize: "30px", width: "100%", height: "100%"}}>
-                                    Find a Registry
-                                </Button>
-                            </Col>
-                            <Col md="1" />
-                            <Col md="3" style={{padding: "0px"}}>
-                                <Button className="button-links center" style={{fontSize: "30px", width: "100%", height: "100%"}}>
-                                    Browse Creative Commemoration
-                                </Button>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col md="2" />
-                </Row>
-            </Container>
-        </div>
-    )
-}
 
 class Register extends React.Component {
     render() {
@@ -99,9 +69,7 @@ class Register extends React.Component {
                     <RegisterHeader />
                     <br />
                     <RegisterDescriptions />
-                <br />
-                    <RegisterButtons />
-                    <br />
+
                 </div>
             </div>
         )
