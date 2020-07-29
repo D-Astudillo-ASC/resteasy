@@ -11,7 +11,7 @@ export default class Q5 extends React.Component {
     render() {
         return (
             <div style={{width: "100%", textAlign: "center"}}>
-                <div style={{fontSize: "2em", marginBottom: "0.5em"}}>
+                <div style={{fontSize: "1.5em", marginBottom: "0.5em"}}>
                     Share a little bit about {localStorage.getItem("first_name")}
                 </div>
                 <Form
@@ -19,7 +19,8 @@ export default class Q5 extends React.Component {
                     scrollToFirstError>
                     <div style={{display: "flex", justifyContent: "center"}}>
                         <Form.Item name="relation_info">
-                            <Input.TextArea placeholder="Describe the person or relation" style={{width: "34em"}}/>
+                            <Input.TextArea placeholder="Add some information about your loved one that you would want others to know.
+                            This will show up at the top of the Digital Memory." style={{width: "34em", height: "7em", borderRadius: "10px"}}/>
                         </Form.Item>
                     </div>
 
@@ -27,10 +28,10 @@ export default class Q5 extends React.Component {
                         Don't worry. You can come back and update this at any time
                     </div>
 
-                    <div style={{display: "flex", justifyContent: "space-between"}}>
-                        <Button type="primary" onClick={this.props.prev}>Previous</Button>
+                    <div style={{display: "flex", justifyContent: "center"}}>
+                        <Button type="primary" onClick={this.props.prev} style={{marginRight: "10px", borderRadius: "10px"}}> Previous</Button>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit">Skip/Next</Button>
+                            <Button type="primary" htmlType="submit" style={{marginLeft: "10px", borderRadius: "10px"}}>Skip/Next</Button>
                         </Form.Item>
                     </div>
                 </Form>

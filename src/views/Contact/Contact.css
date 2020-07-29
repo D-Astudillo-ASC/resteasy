@@ -1,8 +1,33 @@
 @import "../../styles/styles.css";
 
-.header{
+.header-banner{
     margin-bottom: 20px;
-    margin-top:35px
+    background-image: linear-gradient(
+        66.99deg, 
+        rgba(0, 0, 0, 0.4) 0%, 
+        rgba(68, 68, 68, 0.29) 48.36%, 
+        rgba(255, 255, 255, 0) 121.27%), 
+        url("../../assets/img/ron-otsu-62_2KGyX13E-unsplash.jpg");
+        visibility: visible;
+        height: 470px;
+        width: 100%;
+        overflow: hidden;
+        background-size: 100% 100%;
+}
+.sub-header-top {
+    /* Learn More About Becoming A Business Partner */
+
+    position: absolute;
+    text-align: center;
+    top: 224px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+
+    color: #FFFFFF;
 }
 .form-row{
     margin-bottom: 10px

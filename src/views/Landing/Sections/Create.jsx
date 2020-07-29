@@ -1,13 +1,24 @@
 import React from 'react';
 //import {Card, Col, Row} from "antd";
 import {Button, Form, Container, Row, Col} from "react-bootstrap";
+import Carousel from './createCarousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "../../../styles/stylesWithButtons.css"
+import "./Create.css"
 
 function CreateHeader(){
+    const headerStyle = {
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "45px",
+        lineHeight: "67px",
+        textAlign: "center",
+        color:" #5E624E",
+        marginBottom: "30px"
+    }
     return (
-        <div className="centered-text">
-            <h1 className="color1-text" style={{fontSize: "54px"}}> <b> Create </b> </h1>
-            <h3 className="color2-text"> a Forever Memory </h3>
+        <div className="centered-text" style = {headerStyle}>
+            Create a Digital Memory
         </div>
     )
 }
@@ -16,34 +27,77 @@ function CreateText(){
     return (
         <div className="centered-text">
             <Container fluid={true}>
-                <Row className="justify-content-md-center">
-                    <Col md="2" />
-                    <Col md="8">
-                        Traditionally, condolence messages are captured in a Funeral Guest Book at a funeral service.
-                        The book can only be written in and only by those who physically attend a funeral.
-                        It can only be read by the individuals who have the book.
+             
+                <Row>
+                    <Col md="6" className="left-text">
+                        <Row>
+                            <Col md="3" />
+                            <Col md="9">
+                                Create and customize a Digital Memory that celebrates the life of your loved one.
+                            </Col>
+                            {/* <Col md="1" /> */}
+                        </Row>
+                        <Row style={{ margin: "20px 0px" }}>
+                        <Col md="3" />
+                            <Col md="9">
+                                <span>&#8226;</span>
+                            </Col>
+                            {/* <Col md="1" /> */}
+                        </Row>
+
+                        <Row>
+                        <Col md="3" />
+                            <Col md="9">
+                                Choose from our templates and customization tools. Add photos, videos, music, and stories to make it truly unique and meaningful.
+                            </Col>
+                            {/* <Col md="1" /> */}
+
+                        </Row>
+                        <Row style={{ margin: "20px 0px" }}>
+                        <Col md="3" />
+                            <Col md="9">
+                                <span>&#8226;</span>
+                            </Col>
+                            {/* <Col md="1" /> */}
+                        </Row>
+                        <Row>
+                        <Col md="3" />
+                            <Col md="9">
+                                Publish and share with family and friends so they can add their memories.
+                            </Col>
+                            {/* <Col md="1" /> */}
+
+                        </Row>
+                        <Row style={{ margin: "20px 0px" }}>
+                        <Col md="3" />
+                            <Col md="9">
+                                <span>&#8226;</span>
+                            </Col>
+                            {/* <Col md="1" /> */}
+                        </Row>
+                        <Row>
+                        <Col md="3" />
+                            <Col md="9">
+                                Come back at any time - it'll always be here for you.
+                            </Col>
+                            {/* <Col md="1" /> */}
+
+                        </Row>
+
                     </Col>
-                    <Col md="2" />
-                </Row>
-                <br />
-                <Row className="justify-content-md-center centeredText">
-                    <Col md="2" />
-                    <Col md="8">
-                        A Forever Memory allows everyone who loved your person to contribute not only stories and messages,
-                        but photos, live videos, and music, and it can be viewed at any time
-                        (birthdays, anniversaries, any Tuesday when you really miss them) by all who love them.
+
+                    <Col md="6">
+                        <Row>
+                        <Col md="1"/>
+                            <Col md="9">
+                                <div className="carousel">
+                                    <Carousel />
+                                </div>
+                            </Col>
+                            {/* <Col md="2"/> */}
+                            <Col md="2" />
+                        </Row>
                     </Col>
-                    <Col md="2" />
-                </Row>
-                <br />
-                <Row className="justify-content-md-center centeredText">
-                    <Col md="2" />
-                    <Col md="8">
-                        Sharing your Forever Memory also allows you to move outside the confines of a traditional obituary when announcing a death.
-                        You can share more than just facts about their life and death –
-                        it allows you to capture more of the essence of who they are and share a more personal, true story.
-                    </Col>
-                    <Col md="2" />
                 </Row>
             </Container>
         </div>
@@ -55,32 +109,21 @@ function CreateAction(){
         <div className="centered-text">
             <Container fluid={true}>
                 <Row>
-                    <Col md="2" />
-                    <Col md="4">
-                        <div style={{fontSize: "30px", width: "100%", height: "100%", padding: "60px", border: "solid"}}>
-                            One time charge.
-                            <br />
-                            <br />
-                            Remember forever.
-                        </div>
-                    </Col>
-                    <Col md="4">
-                        <Button className="button-links center" style={{fontSize: "25px", width: "100%", height: "100%", padding: "0px", border: "none"}}>
-                            {'\u2192'} Build Your Forever Memory Now
+                   
+                    <Col md="3" />
+                    <Col md="7" style={{ display: "flex", justifyContent: "center"}}>
+                        <Button className="build-button" style={{ fontSize: "25px", width: "272px", height: "96px", padding: "0px", border: "none" }}>
+                            Build Your Forever Memory Now
                         </Button>
+                        <div style={{ textAlign: "left", fontSize: "20px", marginLeft: "20px", padding: "30px 0px"}}>
+                            Curious? check out <a href="/templatedigitalmemory">sample</a> or <a href="/template2digitalmemory">sample2</a> or <a href="/">reviews</a>.
+                        </div>
+
                     </Col>
                     <Col md="2" />
+
                 </Row>
             </Container>
-        </div>
-    )
-}
-
-function CreateExtras(){
-    return (
-        <div className="centered-text">
-            See the difference for yourself –
-            check out <a href="/">samples</a> or <a href="/">reviews</a>.
         </div>
     )
 }
@@ -95,10 +138,10 @@ class Create extends React.Component {
                     <br />
                     <CreateText />
                     <br />
+                    <br />
                     <CreateAction />
                     <br />
-                    <CreateExtras />
-                    <br />
+
                 </div>
             </div>
         )

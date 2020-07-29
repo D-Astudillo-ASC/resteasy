@@ -10,6 +10,8 @@ import {
     Col,
   } from "react-bootstrap";
 
+const rightArrow = require("../../../assets/img/right_arrow_landing.PNG")
+
 class HowItWorks extends React.Component {
     render() {
         return (
@@ -27,7 +29,7 @@ class HowItWorks extends React.Component {
                             <Step 
                                 step={1} 
                                 msg1={'Customize'} 
-                                msg2={'a digital experience'}
+                                msg2={'a Digital Memory by adding photos, music, and stories'}
                                 clipart = {require("../../../assets/icons/fontAwesome/layer-group-solid.svg")}
                             />
                         </Col>
@@ -35,7 +37,7 @@ class HowItWorks extends React.Component {
                         <Step 
                                 step={2} 
                                 msg1={'Discover'} 
-                                msg2={'our products and services'}
+                                msg2={'meaningful products and services'}
                                 clipart = {require("../../../assets/icons/fontAwesome/globe-solid.svg")}
                             />
                         </Col>
@@ -48,16 +50,30 @@ class HowItWorks extends React.Component {
                             />
                         </Col>
                         <Col>
-                            <Step 
-                                step={4} 
-                                msg1={'Share'} 
-                                msg2={'to collect memories from others'}
-                                clipart = {require("../../../assets/icons/fontAwesome/share-alt-solid.svg")}
+                            <Step
+                                step={4}
+                                msg1={'Share'}
+                                msg2={'your Digital Memory with family and friends'}
+                                clipart={require("../../../assets/icons/fontAwesome/share-alt-solid.svg")}
                             />
                         </Col>
                     </Row>
+
+                    <Row>
+                        <Col md="4" />
+                        <Col md="4" className="get-started">
+                            <a href="/my/create" style={{textDecoration: "none"}}>
+                                <div className= "text-box" style={{ display: "flex", justifyContent: "center", marginLeft: "20px" }}>
+                                    <img className="arrow-right" src={rightArrow} />
+                                    <div style={{ color: "#6F9753" }}>Get Started</div>
+                                </div>
+                            </a>
+                        </Col>
+
+                        <Col md="4" />
+                    </Row>
                 </Container>
-                
+
             </div>
         )
     }

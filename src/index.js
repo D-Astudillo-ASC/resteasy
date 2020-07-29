@@ -8,6 +8,8 @@ import * as serviceWorker from './serviceWorker';
 import {REMOTE_HOST} from "./constants";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { AppContextProvider } from "./AppContext";
+
 const $ = require("jquery");
 //test
 // NOTE: All ajax requests will be append to REMOTE_HOST url
@@ -19,10 +21,10 @@ const $ = require("jquery");
         if (options.url
             && options.url.indexOf("userLogin") === -1
             && options.url.indexOf("userSignUp") === -1) {
-            xhr.setRequestHeader(
-                "Authorization",
-                "Token " + localStorage.getItem("access_token")
-            );
+                xhr.setRequestHeader(
+                    "Authorization",
+                    "Token " + localStorage.getItem("access_token")
+                );
         }
         options.url = REMOTE_HOST + options.url;
         xhrPool.push(xhr);
@@ -56,7 +58,11 @@ const $ = require("jquery");
     };
 })($);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <AppContextProvider>
+        <App />
+    </AppContextProvider>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -1,59 +1,78 @@
 import React from "react";
-import StripeCheckout from 'react-stripe-checkout';
-import {Button, notification} from "antd";
-import * as constants from "../../../constants";
-import {saveStripeToken} from "../QuestionsAPI";
+import {Button, Card, Typography} from "antd";
+import {Form, Container, Row, Col} from "react-bootstrap";
 
-export default class Q12 extends React.Component {
-    onToken = (token) => {
-        // console.log(token);
-        saveStripeToken(token.id, token.email)
-            .done((response) => {
-                if (response.success) {
-                    notification.success({
-                        message: 'Payment Successful',
-                        placement: 'bottomRight',
-                    });
-                    this.props.next();
-                } else {
-                    notification.error({
-                        message: 'Payment Failed',
-                        description: response.message,
-                        placement: 'bottomRight',
-                    });
-                }
-            })
-            .fail((error) => {
-                notification.error({
-                    message: 'Payment Failed',
-                    description: (error.responseJSON && error.responseJSON.message) ? error.responseJSON.message : "Something went wrong, Please try again later.",
-                    placement: 'bottomRight',
-                });
-            });
+export default class Q11 extends React.Component {
+    state = {
+        name: localStorage.getItem('first_name'),
+        story: localStorage.getItem('relation_info')
+        
+    };
+
+    setImage(){
+        var templateNum = localStorage.getItem('template_no');
+        console.log(templateNum);
+        var templateSrc = "";
+        switch (templateNum) {
+            case "1":
+                templateSrc = require("../../../assets/img/TemplateOneSample.PNG");
+                break;
+            default:
+                templateSrc = "/img/diamond.jpg";
+        }
+        return templateSrc;
+    }
+
+    onNameChange = (name) => {
+        this.setState({
+            name: name
+        })
+    };
+
+    onStoryChange = (story) => {
+        this.setState({
+            story: story
+        })
     };
 
     render() {
         return (
-            <div style={{width: "100%", textAlign: "center"}}>
-                <div style={{fontSize: "2em", marginBottom: "0.5em"}}>
-                    Complete the payment
+            <div style={{width: "100%"}}>
+                <div style={{textAlign: "center"}}>
+                See below for a sneak peak of what your Digital Memory will look like. You can modify as you wish after you publish and receieve a custom URL
                 </div>
+                <br/>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                    <StripeCheckout
-                        token={this.onToken}
-                        stripeKey={constants.STRIPE_PUBLIC_KEY}
-                        name="RestEasy"
-                        description="Create a digital memorial"
-                        image="/logo196.png" // the pop-in header image (default none)
-                        panelLabel="Pay" // prepended to the amount in the bottom pay button
-                        amount={100} // cents
-                        currency="USD"
-                    />
+                    <Card>
+                        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+                            <div style={{textAlign: "left"}}>
+                                <Typography.Paragraph style={{fontSize: "2em", textAlign: "center"}} editable={{onChange: this.onNameChange}}>
+                                    In Loving Memory of {this.state.name}
+                                </Typography.Paragraph>
+                        
+                                <Typography.Paragraph style={{fontSize: "1em", textAlign: "center"}} editable={{onChange: this.onStoryChange}}>
+                                    {this.state.story}
+                                </Typography.Paragraph>
+                            </div>
+                            <div style={{ paddingLeft: "2em", width: "500px", height: "300px", display: "flex", justifyContent: "center"}}>
+                                <img id="template-select" src={this.setImage()} style={{ maxWidth: "100%", maxHeight: "100%" }} />
+                            </div>
+                        </div>
+
+                    </Card>
                 </div>
-                <div style={{display: "flex", justifyContent: "space-between"}}>
-                    <Button type="primary" onClick={this.props.prev}>Previous</Button>
-                    <Button type="primary" onClick={this.props.next}>Continue (REMOVE THIS IN FINAL PRODUCT)</Button>
+                <br />
+                <div style={{ fontWeight: "bold", textAlign: "center", fontSize: "1.5em" }}>
+                    {this.state.name}'s Registry in Memory of {this.state.name}
+                    <div style={{ height: "300px" }}>
+                    </div>
+                </div>
+
+                <div style={{display: "flex", justifyContent: "center"}}>
+                    <Button type="primary" onClick={this.props.prev} style={{marginRight: "10px", borderRadius: "10px"}}>Previous</Button>
+                    <Button type="primary" onClick={this.props.next} style={{marginLeft: "10px", borderRadius: "10px"}}>Continue</Button>
                 </div>
             </div>);
     }
 }
+
