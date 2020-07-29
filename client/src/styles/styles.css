@@ -1,0 +1,106 @@
+/* Relating to font format */
+  /* @font-face {
+  font-family: 'Euphemia';
+  src: local('Euphemia'), url(../assets/fonts/euphemia.ttf) format('woff');
+}
+
+* {
+  font-family: Euphemia, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}   */
+ @font-face {
+    font-family: "Montserrat";
+    src: url("https://fonts.googleapis.com/css?family=Montserrat");
+  }
+
+* {
+    font-family: Montserrat -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}  
+
+/* Colors for consistency */
+:root{
+    --Color1: #76b64a; /*darkest*/
+    --Color2: #8fc36b;
+    --Color3: #c4e0b2;
+    --Color4: #e1efd8;
+    --Color5: #f2f2f2; /*lightest*/
+}
+
+/* Vanilla CSS for divs that many files would be using */
+.absolute-middle{
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    text-align: center;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    color: var(--Color1);
+}
+a:hover {
+    color: var(--Color2);
+}
+
+
+/* Vanilla CSS for div text that many files would be using */
+.underline-text {
+    text-decoration: underline;
+}
+.emphasis-text {
+    font-weight: bold;
+}
+.centered-text {
+    text-align: center;
+}
+.color1-text{
+    color: var(--Color1)
+}
+.color2-text{
+    color: var(--Color2)
+}
+.color3-text{
+    color: var(--Color3)
+}
+.color4-text{
+    color: var(--Color4)
+}
+.color5-text{
+    color: var(--Color5)
+}
+
+
+/* Relating to page format
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*/
+.landing-sections {
+    margin-bottom: 50px
+}
+
+.link {
+    color: var(--Color1);
+    cursor: pointer;
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}

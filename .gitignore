@@ -4,3 +4,5 @@ src/views/.DS_Store
 src/views/Landing/.DS_Store
 server/mongoCreds.json
 server/config.json
+.env
+.DS_Store

@@ -1,0 +1,8 @@
+{
+    "connectionString": "mongodb+srv://restEasyAdmin:CBS2021!@resteasy.iosdw.mongodb.net/RestEasy?retryWrites=true&w=majority",
+    "secret": "thisisatest123",
+    "stripeSecretKey": "sk_test_51GdM6cKpjNQvxncimdyAUcPhOOStR0h9FmUhsCdEVE7txFZP5ogRnvmkmjT7djeUGRLA321cqzPY7Eh5LId0HYDw000ppwCmm4",
+    "AWSAccessKeyId": "AKIAIRZS3J7WDVMLRK2A",
+    "AWSSecretKey": "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",
+    "userUploadBucket": "resteasy-user-uploads"
+}

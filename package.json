@@ -13,6 +13,7 @@
     "bootstrap": "^4.5.0",
     "concurrently": "^5.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
     "heroku": "^7.42.1",
@@ -41,10 +42,11 @@
     "stripe": "^8.69.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -67,8 +69,9 @@
     "nodemon": "^2.0.4"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "engines": {
-    "node": "14.4.0"
-  }
+    "node": "12.16.3"
+  },
+  "proxy": "http://localhost:8000"
 }

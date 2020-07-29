@@ -1,0 +1,132 @@
+.header {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 35px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    text-align: left;
+
+}
+.section {
+    background-color: white;
+    height: 500px
+}
+.middle {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: white;
+
+}
+.middle .line {
+    border-radius: 10px;
+
+}
+
+.parallax {
+    padding-top: 4%;
+    background-image: url("../../../assets/img/green-1072828_gradientDarker.jpg");
+    visibility: visible;
+    max-height: none;
+    height: 87%;
+    width: 100%;
+    overflow: hidden;
+    background-size: 100% 100%;
+  }
+
+/* If the screen size is 601px wide or more (standard)*/
+@media screen and (min-width: 992px) {
+    .header {
+        font-size: 65px;
+    }
+    .button-row{
+        display: flex;
+        margin-top: 55px
+    }
+    .button-links {
+        border-color: rgba(16, 131, 16, 0.74);
+        font-weight: bold;
+        background-color: transparent;
+        border-width: 5px;
+        font-size: 35px;
+        line-height: 1;
+        width: 37vh;
+    }
+    .button-links:hover {
+        background-color: white;
+        color: rgba(16, 131, 16, 0.74);
+        border-color: white;
+    }
+    .button-links:focus {
+        background-color: white;
+        color: rgba(16, 131, 16, 0.74);
+        border-color: white;
+    }
+    .button-links:active {
+        background-color: white;
+        color: rgba(16, 131, 16, 0.74);
+        border-color: white;
+    }
+    .sub-btn {
+        font-weight: normal;
+        font-size: 15px;
+    }
+    .vertical-line {
+        border-left: 6px solid rgba(16, 131, 16, 0.74);
+    }
+    
+}
+  
+/* If the screen size is 750px wide or less (mobile)*/
+@media screen and (max-width: 992px) {
+    .header {
+        font-size: 25px;
+    }
+    .button-links {
+        border-color: rgba(16, 131, 16, 0.74);
+        font-weight: bold;
+        background-color: transparent;
+        border-width: 5px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .button-links:hover {
+        background-color: white;
+        color: rgba(16, 131, 16, 0.74);
+        border-color: white;
+    }
+    .middle {
+        margin-top: 0px;
+        font-size: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+        
+    }
+    .sub-btn {
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .parallax {
+        padding-top: 4%;
+        background-image: url("../../../assets/img/green-1072828_gradientDarker.jpg");
+        visibility: visible;
+        max-height: none;
+        height: 60%;
+        width: 100%;
+        overflow: hidden;
+      }
+      .vertical-line {
+        border-left: 6px solid rgba(16, 131, 16, 0.74);
+    }
+    
+}
+/* even smaller */
+@media screen and (max-width: 582px) {
+    .button-links {
+        margin-top: 3px;
+        border-width: 3px;
+    }
+    .vertical-line {
+        border-left: 6px solid rgba(16, 131, 16, 0.74);
+    }
+}

@@ -1,0 +1,55 @@
+.left-text {
+    text-align: center;
+    /* width: 50px;
+    margin-left: 160px; */
+    margin-right: 0px;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.carousel {
+    height: 360px;
+    width: 550px;
+    justify-content: center;
+
+}
+
+.build-button {
+    background-color: #8FC36B;
+    font-weight: 500;
+    transition: 0.5s ease;
+    border-width: 2px;
+    border-radius: 9px;
+}
+
+.build-button:hover {
+    transition: 0.5s ease;
+    transform: scale(0.9);
+    background-color: #8FC36B;
+}
+
+.registry-header {
+    padding: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #8FC36B;
+}
+
+.main-text {
+    padding: 0px 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+}
+
+.sub-text {
+    font-size: "15px";
+    font-style: "italic";
+    padding: 0px 60px;
+}
