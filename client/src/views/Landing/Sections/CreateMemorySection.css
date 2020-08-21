@@ -1,0 +1,115 @@
+.image-wave {
+    display: flex;
+    background-image: url("../../../assets/img/1x/wave_section.png");
+    visibility: visible;
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+    background-size: 100% 100%;
+    padding-top: 100px
+}
+.wave-header-section{
+    margin-left: 50px
+}
+.memory-graphic{
+    width: 55%;
+    height: 55%;
+    
+}
+.information{
+    color: white;
+    font-size: 23px;
+    font-weight: normal;
+    text-align: center;
+}
+.divider-dot{
+    text-align: center;
+    font-size: 25px;
+    color: white
+}
+.header-text-celebrate{
+    /* celebrating the life of... */
+    color: #505050;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.header-text-celebrate-emphasis{
+    /* Create a digital memory... */
+    color: #505050;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.memory-sample-link{
+    color: rgb(111, 93, 136);
+    font-weight: bold;
+}
+.memory-sample-link:hover{
+    color: white
+}
+
+@media screen and (max-width: 1340px) {
+    .image-wave {
+        height: 710px;
+    }
+    .information{
+        font-size: 21px;
+    }
+    .header-text-celebrate{
+        /* celebrating the life of... */
+        font-size: 21px;
+        margin-bottom: 25px;
+    }
+    .header-text-celebrate-emphasis{
+        /* Create a digital memory... */
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .image-wave {
+        height: 695px;
+    }
+    .information{
+        font-size: 18px;
+    }
+    .header-text-celebrate{
+        /* celebrating the life of... */
+        font-size: 21px;
+        margin-bottom: 25px;
+    }
+    .header-text-celebrate-emphasis{
+        /* Create a digital memory... */
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 774px) {
+    .image-wave {
+        padding-top: 150px;
+        height: 550px;
+    }
+    .header-text-celebrate-emphasis{
+        /* Create a digital memory... */
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .header-text-celebrate{
+        /* celebrating the life of... */
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    .wave-header-section{
+        margin-left: 0px
+    }
+    .image-wave {
+        height: 800px;
+    }
+    .memory-graphic-col{
+        display: none !important
+    }
+    
+}

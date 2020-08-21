@@ -1,0 +1,77 @@
+@import "../../styles/styles.css";
+
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+    background: var(--Color1);
+}
+
+.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+    background: var(--Color1);
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+    background: var(--Color1);
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus, .ant-btn-primary {
+    background-color: var(--Color1);
+    border-color: var(--Color1);
+}
+.header-banner{
+    margin-bottom: 20px;
+    background-color: black;
+    height: 120px;
+}
+
+.create-text {
+    font-style: normal;
+    line-height: 34px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #000000;
+}
+
+.create-text-no-flex {
+    font-style: normal;
+    line-height: 34px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.upload {
+    background-color: white;
+    border: 1px solid #578C3D;
+    border-radius: 10px;
+    color: #578C3D;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.upload-small {
+    background-color: white;
+    border: 1px solid #578C3D;
+    border-radius: 10px;
+    color: #578C3D;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.nav-button {
+    border-radius: "10px";
+    margin: "10px";
+    width: "100px";
+}

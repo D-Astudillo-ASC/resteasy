@@ -1,0 +1,197 @@
+@import "../../../styles/styles.css";
+.image-section {
+    display: flex;
+    background-image: url("../../../assets/img/1x/wave-imagepng.png");
+    visibility: visible;
+    height: 664px;
+    width: 100%;
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+.header-section{
+    padding-top: 100px;
+    margin-right: 70px;
+}
+.header-text {
+    /* we are sorry you are here... */
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 55px
+}
+.header-text-sub {
+    /* tell their story... */
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 45px;
+}
+.btn-holder{
+    margin-top: 45px;
+    text-align: center;
+}
+.button-learn-more {
+    text-align: center;
+    font-size: 30px;
+    border-color: white;
+    color: #8FC36B;
+    background-color: white;
+    font-weight: normal;
+    background-color:  white;
+    transition: .5s ease;
+    border-radius: 9px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.button-learn-more:hover {
+    color: var(--Color5);
+    background-color: var(--Color1);
+    border-color: var(--Color1);
+    transition: .5s ease;
+}
+.button-learn-more:focus {
+    color: var(--Color5);
+    background-color: var(--Color1);
+    border-color: var(--Color1);
+}
+.button-learn-more:active {
+    color: var(--Color5);
+    background-color: var(--Color1);
+    border-color: var(--Color1);
+}
+
+
+@media screen and (max-width: 1350px) {
+    .tree{
+        width: 645px;
+        height: auto;
+        position: absolute;
+        left:-10px
+    }
+    .image-section {
+        height: 565px;
+    }
+    .header-text {
+        /* losing someone is hard */
+        font-size: 45px;
+    }
+    .header-text-sub {
+        /* But together... */
+        font-size: 27px;
+    }
+    
+}
+@media screen and (max-width: 1202px) {
+    .tree{
+        width: 645px;
+        height: auto;
+        position: absolute;
+        left:-120px
+    }
+    .image-section {
+        height: 565px;
+    }
+    .header-text {
+        /* losing someone is hard */
+        font-size: 40px;
+    }
+    .header-text-sub {
+        /* But together... */
+        font-size: 27px;
+    }
+    .button-learn-more {
+        font-size: 27px;
+    }
+    
+}
+@media screen and (max-width: 1086px) {
+    .tree{
+        width: 510px;
+        height: auto;
+        position: absolute;
+        left:-100px
+    }
+    .image-section {
+        max-height: 455px;
+
+    }
+    .header-section{
+        padding-top: 55px;
+    }
+    .header-text {
+        /* losing someone is hard */
+        font-size: 35px;
+    }
+    .header-text-sub {
+        /* But together... */
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .btn-holder{
+        margin-top: 50px;
+        text-align: center;
+    }
+    .button-learn-more {
+        font-size: 20px;
+    }
+    
+}
+/* even smaller */
+@media screen and (max-width: 990px) {
+    .tree-col{
+        display: none !important;
+    }
+    .tree{
+        width: 455px;
+        height: auto;
+        position: absolute;
+        left:-120px
+    }
+    .image-section {
+        max-height: 500px;
+    }
+    .header-section{
+        padding-top: 75px;
+        margin-right: 0px;
+    }
+    .header-text {
+        /* losing someone is hard */
+        font-size: 35px;
+    }
+    .header-text-sub {
+        /* But together... */
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .btn-holder{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .button-learn-more {
+        font-size: 20px;
+    }
+   
+}
+@media screen and (max-width: 450px) {
+    .header-section{
+        padding-top: 55px;
+        margin-right: 0px;
+    }
+    .header-text {
+        /* We're sorry...*/
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .header-text-sub {
+        /* Tell their story... */
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .image-section {
+        height: 500px;
+    }
+    
+}
