@@ -4,6 +4,8 @@ import axios from "axios";
 import LayoutRowEditor from './LayoutRowEditor.js'
 import EditorPopup from './EditorPopup.js'
 import { REMOTE_HOST } from "../../../constants.js"
+import "../../../styles/stylesWithButtons.css"
+
 
 export default class ProcessedLayoutEditor extends React.Component{
     constructor(props){
@@ -305,8 +307,8 @@ export default class ProcessedLayoutEditor extends React.Component{
         return(
             <div>
                 <a href="/templatedigitalmemory">
-                    <button
-                        style={{width: "20%", marginLeft: "40%", marginRight: "40%"}}
+                <button
+                        style={{ border: "none", borderRadius: 4, paddingLeft: 15, paddingRight: 15, paddingTop:5, paddingBottom:5}}
                     >
                         View page
                     </button>

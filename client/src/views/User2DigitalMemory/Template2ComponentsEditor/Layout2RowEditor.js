@@ -2,11 +2,12 @@ import React from 'react';
 import {Button, Form, Container, Row, Col} from "react-bootstrap";
 import "../Template2DigitalMemory.css"
 import "../../../styles/styles.css"
+import "../../../styles/stylesWithButtons.css"
 import EditableComponent from "./EditableComponent.js"
 import axios from "axios";
 import { REMOTE_HOST } from "../../../constants.js"
 
-const imgStyle = {height: "100%", width: "100%", objectFit: "cover"}
+const imgStyle = {height: "100%", width: "100%", objectFit: "cover", boxShadow:"1px 1px 5px grey", borderRadius:"10px"}
 const h = 600
 
 class DisplayItem extends React.Component{
@@ -73,15 +74,15 @@ class DisplayItem extends React.Component{
     }
     else if(this.props.item.type == "empty"){
         return (
-            <div className="center" style={{height: "100%", width: "100%", backgroundColor: "lightpink"}}>
+            <div className="center" style={{height: "100%", width: "100%", backgroundColor: "lightpink", boxShadow:"1px 1px 5px grey", borderRadius:"10px"}}>
                 Insert photo or memory here.
             </div>
         )
     }
     else if(this.props.item.type == "text"){
         return (
-            <div className="center" style={{height: "100%", width: "100%", backgroundColor: "#E2FCD3"}}>
-                {this.props.item.img}
+            <div className="center" style={{height: "100%", width: "100%", backgroundColor: "#E2FCD3", boxShadow:"1px 1px 5px grey", borderRadius:"10px"}}>
+            {this.props.item.img}
             </div>
         )
     }
@@ -191,8 +192,9 @@ export default function LayoutRowEditor(props){
                 {LayoutCols}
             </Col>
             <Col md="2">
-                <button
-                    style={{marginTop: "50%"}}
+                <button className="button-links"
+
+                    style={{marginTop: "50%",borderColor: "#CC0000", borderStyle: "solid", borderRadius: 4, paddingLeft: 15, paddingRight: 15, paddingTop:5, paddingBottom:5, backgroundColor: "white", color: "#CC0000"}}
                     onClick={() => {
                         props.deleteRow(props.rownum)
                     }}

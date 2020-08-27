@@ -12,7 +12,7 @@ a:hover {
         border-color: #8FC36B;
         color: white;
         background-color: var(--Color5);
-        font-weight: lighter;
+        font-weight: normal;
         background-color:  #8FC36B;
         transition: .5s ease;
         border-radius: 9px;

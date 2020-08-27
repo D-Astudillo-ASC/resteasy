@@ -7,6 +7,7 @@ import ProcessedLayoutEditor from './Template2ComponentsEditor/ProcessedLayout2E
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { REMOTE_HOST } from "../../constants.js"
+import "../../styles/stylesWithButtons.css"
 
 export default class TemplateDigitalMemoryModularEditor extends React.Component{
     constructor(props){
@@ -44,7 +45,6 @@ export default class TemplateDigitalMemoryModularEditor extends React.Component{
         return (
             <PageWrapper content={
                 <DndProvider backend={HTML5Backend}>
-                    <div style={{height: "100px", backgroundColor:"grey"}} />
                     <br />
                     <h1 className="centered-text emphasis-text"> Template Digital Memory Editor </h1>
                     <h3 className="centered-text"> Click on items to interact, or drag and drop to swap </h3>

@@ -15,9 +15,14 @@ const mongoose = require("mongoose");
 // var querystring = require('querystring');
 // var cookieParser = require('cookie-parser');
 
-const DEVELOPING = true;
+var DEVELOPING = true
 
-
+if(process.env.NODE_ENV == "production"){
+    DEVELOPING = false
+    console.log("-----Production Mode!-----")
+}else{
+    console.log("-----Dev Mode-----")
+}
 // Setup express app
 app.use(express.json());
 
@@ -30,7 +35,6 @@ app.use(
 app.use(bodyParser.json());
 
 if(!DEVELOPING){
-    console.log(__dirname)
     app.use(express.static(path.join(__dirname, "client/build")))
 
     app.get('*', (req,res) =>{

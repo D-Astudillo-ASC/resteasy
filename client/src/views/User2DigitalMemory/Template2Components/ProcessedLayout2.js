@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, Form, Container, Row, Col} from "react-bootstrap";
 import { toast } from "react-toastify";
 import Layout2Row from './Layout2Row.js'
+import "../../../styles/stylesWithButtons.css"
 
 export default class ProcessedLayout extends React.Component{
     constructor(props){
@@ -22,13 +23,19 @@ export default class ProcessedLayout extends React.Component{
         
         return(
             <div>
-                <a href="/digitalmemoryeditor">
-                    <button
-                        style={{width: "20%", marginLeft: "40%", marginRight: "40%"}}
-                    >
-                        Edit your digital memory
-                    </button>
-                </a>
+                <Container flex="true">
+                    <Row>
+                        <Col className="d-flex justify-content-center">
+                            <a href="/digitalmemoryeditor">
+                                <button className="button-links"
+                                    style={{ border: "none", borderRadius: 4, paddingLeft: 15, paddingRight: 15, paddingTop:5, paddingBottom:5}}
+                                >
+                                    Edit your digital memory
+                                </button>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
                 <br />
                 <br />
                 <Container fluid={true}>

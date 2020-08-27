@@ -104,3 +104,7 @@ code {
 .italic {
     font-style: italic;
 }
+
+.space-top{
+    height: 50px;
+}

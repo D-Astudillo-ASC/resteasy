@@ -5,7 +5,7 @@ import "../../../styles/styles.css"
 import axios from "axios";
 import { REMOTE_HOST } from "../../../constants.js"
 
-const imgStyle = {height: "100%", width: "100%", objectFit: "cover"}
+const imgStyle = {height: "100%", width: "100%", objectFit: "cover", boxShadow:"1px 1px 5px grey", borderRadius:"10px"}
 const h = 600
 
 class DisplayItem extends React.Component{
@@ -55,7 +55,7 @@ class DisplayItem extends React.Component{
         }
         else if(this.props.item.type == "text"){
             return (
-                <div className="center" style={{height: "100%", width: "100%", backgroundColor: "#E2FCD3"}}>
+                <div className="center" style={{height: "100%", width: "100%", backgroundColor: "#E2FCD3", boxShadow:"1px 1px 5px grey", borderRadius:"10px"}}>
                     {this.props.item.img}
                 </div>
             )

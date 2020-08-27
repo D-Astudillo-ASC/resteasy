@@ -2,6 +2,12 @@ import React from 'react';
 import Popup from "reactjs-popup"
 import axios from "axios";
 import { REMOTE_HOST } from "../../../constants.js"
+import { Container, Row, Col } from 'react-bootstrap';
+import 'antd/dist/antd.css';
+import { Upload, Button, message, Divider, notification } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
+import "./EditorPopup.css"
+import "../../../styles/styles.css"
 
 function showUploads(toggleShowingUploads){
     const potentialNames = JSON.parse(localStorage.getItem("user")).digitalMemories.testMemory
@@ -89,6 +95,8 @@ class CustomPopup extends React.Component{
         super(props)
         this.state = {
             showingUploads: false,
+            fileList: [],
+            uploading: false,
             photos: {},
             selectedPhoto: "",
             text: this.props.lastClickedTxt,
@@ -111,17 +119,14 @@ class CustomPopup extends React.Component{
     }
 
     //when user uploads new image
-    handleUpload = ev => {
-        if(this.uploadInput.files.length == 0){
-            return
-        }
-        var file = this.uploadInput.files[0];
-
-        var fileToAddDB = ""
-
-        console.log("new file")
+    handleUpload = () => {
+        console.log(this.state.fileList)
+        var file = this.state.fileList[0]
+        
+        // console.log("new file")
         console.log(file)
         // Split the filename to get the name and type
+        // !!! need to rethink logic. if file has multiple '.' then it won't parse correctly !!!
         let fileParts = file.name.split('.');
         let fileName = fileParts[0];
         let fileType = fileParts[1];
@@ -145,9 +150,8 @@ class CustomPopup extends React.Component{
             console.log(response)
             var returnData = response.data
             var signedRequest = returnData.signedRequest;
-            var url = returnData.url;
-            this.setState({url: url})
-            fileToAddDB = returnData.fileName
+            console.log()
+            var fileToAddDB = returnData.fileName
             console.log("Recieved a signed request " + signedRequest);
             console.log(fileToAddDB)
         
@@ -159,56 +163,156 @@ class CustomPopup extends React.Component{
             };
             axios.put(signedRequest,file,options)
             .then(result => {
-                this.setState({success: true});
+                console.log(result)
+                this.setState({
+                    success: true,
+                    fileList: [],
+                    uploading: false,});
                 
                 // upon successful upload, add the file data into the userImages index in mongoDB
                 console.log("add to database: " + fileToAddDB)
                 axios.post(REMOTE_HOST + "/aws/addImgDB", {
                     memoryName: "testMemory",
-                    imgID: fileToAddDB
+                    imgID: file
                 }, config)
                 .then( result => {
                     console.log(result)
                     this.props.changeLastType("img", fileToAddDB)
+                    message.success('upload successfully.');
                 }).catch(error => {
                     console.log("error " + JSON.stringify(error))
+                    notification["error"]({
+                        message: "Upload Failed",
+                        description: "Your image did not upload correctly",
+                        top: 90
+                    });
                 })
             })
             .catch(error => {
+                this.setState({
+                    uploading: false
+                })
+                notification["error"]({
+                    message: "Upload Failed",
+                    description: "Your image did not upload correctly",
+                    top: 90
+                });
                 console.log("ERROR " + JSON.stringify(error));
             })
         })
         .catch(error => {
             console.log(JSON.stringify(error));
+            notification["error"]({
+                message: "Upload Failed",
+                description: "Your image did not upload correctly",
+                top: 90
+            });
         })
     }
 
     render() {
+        const { uploading, fileList } = this.state;
+        const props = {
+        onRemove: file => {
+            console.log("removing element")
+            this.setState(state => {
+                const index = state.fileList.indexOf(file);
+                return {
+                    fileList: [],
+                };
+            });
+        },
+        beforeUpload: file => {
+            this.setState(state => ({
+            fileList: [file],
+            }));
+            return false;
+        },
+        fileList,
+        };
+
         if(!this.state.showingUploads){
             return(
                 <div>
-                    <button
-                        onClick={() => {this.props.clearLastClicked()}}
-                    >
-                        Delete this.
-                    </button>
-                    <br />
-                    <input ref={(ref) => { this.uploadInput = ref; }} type="file"/>
-                    <button onClick={this.handleUpload}>Use this image</button>
-                    <br />
-                    <button onClick={() => showUploads(this.toggleShowingUploads)}>Use previously uploaded image</button>
-                    <br />
-                    <input
-                        onChange={(event) => {this.setState({text: event.target.value})}}
-                        type="text"
-                        value={this.state.text} 
-                        style={{width: "50%"}}
-                    />
-                    <button
-                        onClick={() => {this.props.changeLastType("text", this.state.text)}}
-                    >
-                        Use this memory
-                    </button>
+                    <Container flex="true">
+                        <Row>
+                            <Col className="d-flex justify-content-center">
+                                <h4>Upload an Image</h4>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="d-flex justify-content-center">
+                                <Upload 
+                                    {...props}
+                                    multiple={false}
+                                >
+                                    <Button>
+                                        <UploadOutlined /> Select File
+                                    </Button>
+                                </Upload>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="d-flex justify-content-center">
+                                <Button
+                                    type="primary"
+                                    onClick={this.handleUpload}
+                                    disabled={fileList.length === 0 || fileList.length > 1}
+                                    loading={uploading}
+                                    style={{ marginTop: 16 }}
+                                >
+                                    {uploading ? 'Uploading' : 'Start Upload'}
+                                </Button>
+                            </Col>
+                        </Row>
+                        <Divider />
+                        <Row>
+                            <Col className="d-flex justify-content-center">
+                                <button className="button-links"
+                                    style={{ border: "none", borderRadius: 0, paddingLeft: 15, paddingRight: 15, paddingTop:5, paddingBottom:5}}
+                                    onClick={() => showUploads(this.toggleShowingUploads)}
+                                >
+                                    Use a previously uploaded image
+                                </button>
+                            </Col>
+                        </Row>
+                        <Divider />
+                        <Row>
+                            <Col className="d-flex justify-content-center">
+                                <h4>Write a message</h4>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="d-flex justify-content-center">
+                                <input
+                                    onChange={(event) => {this.setState({text: event.target.value})}}
+                                    type="text"
+                                    value={this.state.text} 
+                                    style={{width: "50%", borderWidth: 1, backgroundColor:"rgba(255, 255, 255, 0.0)"}}
+
+                                />
+                                <button className="button-links"
+                                    style={{ border: "none", borderRadius: 0, paddingLeft: 15, paddingRight: 15, paddingTop:5, paddingBottom:5}}
+                                    onClick={() => {this.props.changeLastType("text", this.state.text)}}
+                                >
+                                    Use this memory
+                                </button>
+                            </Col>
+                        </Row>
+                        <Divider />
+                        <Row>
+                            <Col className="d-flex justify-content-center">
+                                <a href="/digitalmemoryeditor">
+                                    <button className="button-links"
+                                        style={{borderColor: "#CC0000", borderStyle: "solid", borderRadius: 4, paddingLeft: 15, paddingRight: 15, paddingTop:5, paddingBottom:5, backgroundColor: "white", color: "#CC0000"}}
+                                        onClick={() => {this.props.clearLastClicked()}}
+                                    >
+                                        Delete This Item
+                                    </button>
+                                </a>
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
             )
         }
@@ -229,6 +333,7 @@ export default function EditorPopup (props){
             open={(props.popupIsOpen)}
             onClose={() => {props.togglePopupIsOpen()}}
             style={{zIndex: "999999"}}
+            contentStyle={{backgroundColor:"rgba(255, 255, 255, 0.96)", paddingBottom: 20, paddingTop: 20, borderRadius: 10}}
         >
             <CustomPopup
                 clearLastClicked={props.clearLastClicked}
