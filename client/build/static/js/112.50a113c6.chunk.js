@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[112],{94:function(e,n,t){"use strict";t.r(n),t.d(n,"tryUserSignUp",(function(){return r}));var a=t(53),r=function(e,n,t){var r={name:e,email:n,password:t},i=new a.Deferred;return a.ajax({url:"/api/userSignUp/",type:"POST",contentType:"application/json; charset=utf-8",dataType:"json",data:JSON.stringify(r),cache:!1,processData:!1}).done((function(e){i.resolve(e)})).fail((function(e,n,t){i.reject(e)})),i.promise()}}}]);
+//# sourceMappingURL=112.50a113c6.chunk.js.map

@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[234],{249:function(p,c,t){p.exports=t.p+"static/media/away-3668344_1920_cropped.7333c15f.jpg"}}]);
+//# sourceMappingURL=234.6f11e4c1.chunk.js.map

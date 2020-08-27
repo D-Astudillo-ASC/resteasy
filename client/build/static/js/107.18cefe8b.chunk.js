@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[107],{67:function(e,n,t){"use strict";t.r(n),t.d(n,"uploadMedia",(function(){return r})),t.d(n,"saveStripeToken",(function(){return i}));var a=t(53),r=function(e){},i=function(e,n){var t=new FormData;t.append("token_id",e),t.append("payee_email",n);var r=new a.Deferred;return a.ajax({url:"/api/saveStripeToken/",type:"POST",contentType:!1,data:t,cache:!1,processData:!1}).done((function(e){r.resolve(e)})).fail((function(e,n,t){r.reject(e)})),r.promise()}}}]);
+//# sourceMappingURL=107.18cefe8b.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/Template2DigitalMemory/Template2ComponentsEditor/dragitems.js"],"names":["DragItemTypes","IMAGE"],"mappings":"mGAAA,qDAAO,IAAMA,EAAgB,CACzBC,MAAO","file":"static/js/113.8dfb421d.chunk.js","sourcesContent":["export const DragItemTypes = {\n    IMAGE: 'image',\n}\n"],"sourceRoot":""}

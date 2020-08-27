@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[245],{291:function(e,t,i){e.exports=i.p+"static/media/green-1072828_gradient.1fb3af69.jpg"}}]);
+//# sourceMappingURL=245.0aaac53e.chunk.js.map

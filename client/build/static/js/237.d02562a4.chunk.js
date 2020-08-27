@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[237],{251:function(e,t,i){e.exports=i.p+"static/media/commemoration_jewelry.6a8401d1.jpg"}}]);
+//# sourceMappingURL=237.d02562a4.chunk.js.map
